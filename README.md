@@ -8,15 +8,16 @@
 1. Copy `docker-compose-prod.yml` to the `/home/<your-user>/` directory on the host server and rename the file `docker-compose.yml`
 2. Copy the entire `theme` folder to the `/home/<your-user>/` directory on the host server
 3. Copy the entire `nginx` folder to the `/home/<your-user>/` directory on the host server
-4. Generate SSL certificates for your domain with certbot
-5. By default the generated certificates are stored under `/etc/letsencrypt/live/<your-domain>`. Copy the files `fullchain.pem` and `privkey.pem` from `/etc/letsencrypt/live/<your-domain>` to `/home/<your-user>/nginx/`
-6. On the host server, set values for the following env variables:
+4. Edit the file `/home/<your-user>/nginx/default.conf` by replacing `<your-domain>` (line 9) with your domain (without the `https://` prefix)
+5. Generate SSL certificates for your domain with certbot
+6. By default the generated certificates are stored under `/etc/letsencrypt/live/<your-domain>`. Copy the files `fullchain.pem` and `privkey.pem` from `/etc/letsencrypt/live/<your-domain>` to `/home/<your-user>/nginx/`
+7. On the host server, set values for the following env variables:
    * `POSTGRES_DB`
    * `POSTGRES_USER`
    * `POSTGRES_PASSWORD`
    * `KEYCLOAK_ADMIN`
    * `KEYCLOAK_ADMIN_PASSWORD`
-   * `APP_URL` (i.e. your domain)
+   * `APP_URL` (i.e. your domain with the `https://` prefix)
    
     (Alternatively you can also modify `docker-compose.yml` on the host server directly by replacing all `${...}` with the relevant values)
     
