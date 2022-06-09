@@ -47,6 +47,7 @@ services:
     volumes:
       - ./access:/var/lib/docker/access
     environment:
+      APP_URL: info1-staging.ifi.uzh.ch
       DOCKER_TLS_CERTDIR:
   backend:
     container_name: backend
