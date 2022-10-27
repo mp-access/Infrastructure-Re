@@ -8,14 +8,14 @@ services:
     ports:
       - "5432:5432"
     volumes:
-      - postgres_data:/var/lib/postgresql/data
+      - access_data:/var/lib/postgresql/data
     environment:
       POSTGRES_DB: ${POSTGRES_DB}
       POSTGRES_USER: ${POSTGRES_USER}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
   keycloak:
     container_name: keycloak
-    image: quay.io/keycloak/keycloak:18.0.0
+    image: quay.io/keycloak/keycloak:19.0.3
     restart: always
     ports:
       - "8443:8443"
@@ -81,4 +81,4 @@ services:
       - backend
 
 volumes:
-  postgres_data:
+  access_data:

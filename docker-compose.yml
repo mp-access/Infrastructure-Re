@@ -8,14 +8,14 @@ services:
     ports:
       - "5432:5432"
     volumes:
-      - postgres_data:/var/lib/postgresql/data
+      - access_data:/var/lib/postgresql/data
     environment:
       POSTGRES_DB: access
       POSTGRES_USER: admin
       POSTGRES_PASSWORD: admin
   keycloak:
     container_name: keycloak
-    image: quay.io/keycloak/keycloak:18.0.0
+    image: quay.io/keycloak/keycloak:19.0.3
     restart: always
     ports:
       - "8080:8080"
@@ -33,5 +33,5 @@ services:
       KEYCLOAK_ADMIN_PASSWORD: admin
 
 volumes:
-  postgres_data:
+  access_data:
     driver: local
