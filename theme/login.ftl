@@ -40,7 +40,7 @@
         <text>Log in with your organization</text>
         <#if social.providers??>
             <#list social.providers as p>
-                <#if p.displayName = "SWITCH-AAI">
+                <#if p.displayName = "SWITCH edu-ID">
                   <button tabindex="0" class="btn btn-lg btn-light py-3 border-0 w-100" onclick="location.href='${p.loginUrl}';">
                     <img src="${url.resourcesPath}/img/switch_aai.svg" width="100" height="18" alt="rocket" />
                   </button>
