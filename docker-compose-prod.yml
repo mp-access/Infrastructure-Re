@@ -8,35 +8,38 @@ services:
     ports:
       - "5432:5432"
     volumes:
-      - access_data:/var/lib/postgresql/data
+      - courses:/var/lib/postgresql/data
     environment:
       POSTGRES_DB: access
       POSTGRES_USER: ${POSTGRES_USER}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
   keycloak:
     container_name: keycloak
-    image: quay.io/keycloak/keycloak:20.0.0
+    image: quay.io/keycloak/keycloak:20.0.1
     restart: always
     ports:
-      - "8080:8080"
       - "8443:8443"
     volumes:
-      - ./theme:/opt/keycloak/themes/access/login
-      - ./nginx:/etc/nginx
-    command: start --auto-build
+      - ./access/theme:/opt/keycloak/themes/access/login
+      - ./access/realm.json:/opt/keycloak/data/import/realm.json
+      - ./access/certs/ssl:/certs:ro
+    command: start --import-realm
     depends_on:
       - postgres
     environment:
-      KC_HOSTNAME_STRICT: 'false'
-      KC_HTTPS_CERTIFICATE_FILE: /certs/fullchain.pem
-      KC_HTTPS_CERTIFICATE_KEY_FILE: /certs/privkey.pem
+      KC_FEATURES: preview,admin,docker
       KC_PROXY: edge
       KC_DB: postgres
-      KC_DB_URL: jdbc:postgresql://postgres:5432/access
+      KC_DB_URL: ${POSTGRES_URL}
       KC_DB_USERNAME: ${POSTGRES_USER}
       KC_DB_PASSWORD: ${POSTGRES_PASSWORD}
+      KC_HTTPS_CERTIFICATE_FILE: /certs/fullchain.pem
+      KC_HTTPS_CERTIFICATE_KEY_FILE: /certs/privkey.pem
+      KC_HOSTNAME_STRICT: 'false'
       KEYCLOAK_ADMIN: ${KEYCLOAK_ADMIN}
       KEYCLOAK_ADMIN_PASSWORD: ${KEYCLOAK_ADMIN_PASSWORD}
+      CLIENT_SECRET: ${CLIENT_SECRET}
+      PROXY_ADDRESS_FORWARDING: 'true'
   docker:
     container_name: docker
     image: docker:dind
@@ -44,11 +47,11 @@ services:
     ports:
       - "2376:2376"
     volumes:
-      - ./access:/usr/access
-      - ./certs/ca:/certs/ca
-      - ./certs/client:/certs/client
+      - ./access/data:/workspace/data
+      - ./access/certs/tls/ca:/certs/ca
+      - ./access/certs/tls/client:/certs/client
     environment:
-      DOCKER_TLS_CERTDIR: /certs
+      - DOCKER_TLS_CERTDIR=/certs
   backend:
     container_name: backend
     image: sealuzh/access-backend:re
@@ -60,18 +63,19 @@ services:
       - keycloak
       - docker
     volumes:
-      - ./access:/usr/access
-      - ./certs/client:/certs/client:ro
+      - ./access/data:/workspace/data
+      - ./access/certs/tls/client:/certs/client:ro
     environment:
+      POSTGRES_URL: ${POSTGRES_URL}
       POSTGRES_USER: ${POSTGRES_USER}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
       KEYCLOAK_ADMIN: ${KEYCLOAK_ADMIN}
       KEYCLOAK_ADMIN_PASSWORD: ${KEYCLOAK_ADMIN_PASSWORD}
-      CLIENT_SECRET: ${CLIENT_SECRET}
       AUTH_SERVER_URL: ${AUTH_SERVER_URL}
       DOCKER_HOST: tcp://docker:2376
       DOCKER_TLS_VERIFY: 'true'
       DOCKER_CERT_PATH: /certs/client
+      WORKING_DIR: /workspace/data
   frontend:
     container_name: frontend
     image: sealuzh/access-frontend:re
@@ -82,10 +86,16 @@ services:
     depends_on:
       - backend
     volumes:
-      - ./certs:/certs:ro
-      - ./nginx.conf:/etc/nginx/conf.d/default.conf
+      - ./access/certs/ssl:/certs:ro
+      - ./access/nginx.conf:/etc/nginx/conf.d/nginx.conf
     environment:
-      REACT_APP_AUTH_SERVER_URL: ${AUTH_SERVER_URL}
+      APP_HOST: ${APP_HOST}
+  certbot:
+    image: certbot/certbot
+    container_name: certbot
+    command: certonly --webroot -w /certs --email ${EMAIL}
+    volumes:
+      - ./access/certs/ssl:/certs:ro
 
 volumes:
-  access_data:
+  courses:
