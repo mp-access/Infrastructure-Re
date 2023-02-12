@@ -10,6 +10,7 @@ services:
     volumes:
       - courses:/var/lib/postgresql/data
     environment:
+      TZ: "Europe/Zurich"
       POSTGRES_DB: access
       POSTGRES_USER: ${POSTGRES_USER}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
@@ -17,17 +18,20 @@ services:
     container_name: keycloak
     image: quay.io/keycloak/keycloak:20.0.1
     restart: always
+    privileged: true
     ports:
+      - "8080:8080"
       - "8443:8443"
+    depends_on:
+      - postgres
     volumes:
       - ./access/theme:/opt/keycloak/themes/access/login
       - ./access/realm.json:/opt/keycloak/data/import/realm.json
-      - ./access/certs/ssl:/certs:ro
+      - ./access/letsencrypt/live/${DOMAIN}/fullchain.pem:/certs/fullchain.pem
+      - ./access/letsencrypt/live/${DOMAIN}/privkey.pem:/certs/privkey.pem
     command: start --import-realm
-    depends_on:
-      - postgres
     environment:
-      KC_FEATURES: preview,admin,docker
+      KC_FEATURES: preview,docker
       KC_PROXY: edge
       KC_DB: postgres
       KC_DB_URL: ${POSTGRES_URL}
@@ -47,11 +51,11 @@ services:
     ports:
       - "2376:2376"
     volumes:
-      - ./access/data:/workspace/data
-      - ./access/certs/tls/ca:/certs/ca
-      - ./access/certs/tls/client:/certs/client
+      - ./access/workspace:/workspace/data
+      - ./access/tls/ca:/tls/ca
+      - ./access/tls/client:/tls/client
     environment:
-      - DOCKER_TLS_CERTDIR=/certs
+      DOCKER_TLS_CERTDIR: /tls
   backend:
     container_name: backend
     image: sealuzh/access-backend:re
@@ -63,9 +67,10 @@ services:
       - keycloak
       - docker
     volumes:
-      - ./access/data:/workspace/data
-      - ./access/certs/tls/client:/certs/client:ro
+      - ./access/workspace:/workspace/data
+      - ./access/tls/client:/tls/client:ro
     environment:
+      TZ: "Europe/Zurich"
       POSTGRES_URL: ${POSTGRES_URL}
       POSTGRES_USER: ${POSTGRES_USER}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
@@ -74,7 +79,7 @@ services:
       AUTH_SERVER_URL: ${AUTH_SERVER_URL}
       DOCKER_HOST: tcp://docker:2376
       DOCKER_TLS_VERIFY: 'true'
-      DOCKER_CERT_PATH: /certs/client
+      DOCKER_CERT_PATH: /tls/client
       WORKING_DIR: /workspace/data
   frontend:
     container_name: frontend
@@ -83,19 +88,19 @@ services:
     ports:
       - "80:80"
       - "443:443"
-    depends_on:
-      - backend
     volumes:
-      - ./access/certs/ssl:/certs:ro
+      - ./access/certbot:/var/www/certbot
+      - ./access/letsencrypt:/etc/letsencrypt
       - ./access/nginx.conf:/etc/nginx/conf.d/nginx.conf
-    environment:
-      APP_HOST: ${APP_HOST}
   certbot:
     image: certbot/certbot
     container_name: certbot
-    command: certonly --webroot -w /certs --email ${EMAIL}
     volumes:
-      - ./access/certs/ssl:/certs:ro
+      - ./access/certbot:/var/www/certbot
+      - ./access/letsencrypt:/etc/letsencrypt
+    command: >-
+             certonly --webroot -w /var/www/certbot
+             --email ${KEYCLOAK_ADMIN} -d ${DOMAIN} --agree-tos
 
 volumes:
   courses:

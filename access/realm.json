@@ -484,6 +484,38 @@
   "webAuthnPolicyPasswordlessCreateTimeout": 0,
   "webAuthnPolicyPasswordlessAvoidSameAuthenticatorRegister": false,
   "webAuthnPolicyPasswordlessAcceptableAaguids": [],
+  "users" : [ {
+    "id" : "d95603c0-5a0f-4c9a-85f2-f2036892966d",
+    "createdTimestamp" : 1670253828568,
+    "username" : "student@uzh.ch",
+    "enabled" : true,
+    "totp" : false,
+    "emailVerified" : true,
+    "firstName" : "Student",
+    "lastName" : "Test",
+    "email" : "student@uzh.ch",
+    "credentials" : [],
+    "disableableCredentialTypes" : [ ],
+    "realmRoles" : [ "default-roles-access", "student" ],
+    "notBefore" : 0,
+    "groups" : [ ]
+  }, {
+    "id" : "a08fc0d2-854a-4860-9f12-6c06b17df93e",
+    "createdTimestamp" : 1670253828435,
+    "username" : "supervisor@uzh.ch",
+    "enabled" : true,
+    "totp" : false,
+    "emailVerified" : true,
+    "firstName" : "Supervisor",
+    "lastName" : "Test",
+    "email" : "supervisor@uzh.ch",
+    "credentials" : [],
+    "disableableCredentialTypes" : [ ],
+    "requiredActions" : [ ],
+    "realmRoles" : [ "default-roles-access", "supervisor" ],
+    "notBefore" : 0,
+    "groups" : [ ]
+  } ],
   "scopeMappings": [
     {
       "clientScope": "offline_access",
@@ -553,7 +585,8 @@
         "acr",
         "roles",
         "profile",
-        "email"
+        "email",
+        "enrollments"
       ],
       "optionalClientScopes": [
         "address",
@@ -1044,6 +1077,33 @@
       ]
     },
     {
+      "id": "3aeb429f-4d11-4da3-9cb2-1abdb61ae095",
+      "name": "enrollments",
+      "description": "",
+      "protocol": "openid-connect",
+      "attributes": {
+        "include.in.token.scope": "false",
+        "display.on.consent.screen": "false",
+        "gui.order": ""
+      },
+      "protocolMappers": [
+        {
+          "id": "f4347293-bc28-4d7b-aa0f-9981712fbdb1",
+          "name": "enrollments",
+          "protocol": "openid-connect",
+          "protocolMapper": "oidc-usermodel-realm-role-mapper",
+          "consentRequired": false,
+          "config": {
+            "id.token.claim": "true",
+            "access.token.claim": "true",
+            "claim.name": "enrollments",
+            "multivalued": "true",
+            "userinfo.token.claim": "true"
+          }
+        }
+      ]
+    },
+    {
       "id": "45c94416-4f24-4cfc-8c17-d7df4efc6276",
       "name": "acr",
       "description": "OpenID Connect scope for add acr (authentication context class reference) to the token",
@@ -1419,7 +1479,8 @@
     "email",
     "roles",
     "web-origins",
-    "acr"
+    "acr",
+    "enrollments"
   ],
   "defaultOptionalClientScopes": [
     "offline_access",
@@ -1456,7 +1517,7 @@
       "providerId": "oidc",
       "enabled": true,
       "updateProfileFirstLoginMode": "on",
-      "trustEmail": false,
+      "trustEmail": true,
       "storeToken": false,
       "addReadTokenRoleOnCreate": false,
       "authenticateByDefault": false,
@@ -1483,13 +1544,13 @@
         "clientSecret": "${CLIENT_SECRET}",
         "passMaxAge": "false",
         "allowedClockSkew": "0",
-        "defaultScope": "openid,profile,mail"
+        "defaultScope": "openid,profile,mail,swissEduID,swissEduIDBase,swissEduIDExtended"
       }
     }
   ],
   "identityProviderMappers": [
     {
-      "id": "d9e46d93-a0b5-4258-a691-52d1756da4ad",
+      "id": "621ab334-4f4a-4336-9719-7e8473736c0f",
       "name": "staff-supervisor",
       "identityProviderAlias": "switch-edu-id",
       "identityProviderMapper": "oidc-role-idp-mapper",
@@ -1497,8 +1558,10 @@
         "are.claim.values.regex": "false",
         "role": "supervisor",
         "claim.value": "staff@uzh.ch",
+        "claims": "{}",
         "syncMode": "FORCE",
-        "claim": "swissEduIDAssociatedMail"
+        "claim": "swissEduIDLinkedAffiliation",
+        "attributes": "{}"
       }
     }
   ],

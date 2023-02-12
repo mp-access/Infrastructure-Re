@@ -10,13 +10,15 @@ services:
     volumes:
       - courses:/var/lib/postgresql/data
     environment:
+      TZ: "Europe/Zurich"
       POSTGRES_DB: access
       POSTGRES_USER: ${POSTGRES_USER}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
   keycloak:
     container_name: keycloak
-    image: quay.io/keycloak/keycloak:20.0.1
+    image: quay.io/keycloak/keycloak:20.0.3
     restart: always
+    privileged: true
     ports:
       - "8080:8080"
     volumes:
@@ -26,7 +28,7 @@ services:
     depends_on:
       - postgres
     environment:
-      KC_FEATURES: preview,admin,docker
+      KC_FEATURES: preview,docker
       KC_DB: postgres
       KC_DB_URL: ${POSTGRES_URL}
       KC_DB_USERNAME: ${POSTGRES_USER}
