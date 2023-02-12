@@ -16,7 +16,7 @@ services:
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
   keycloak:
     container_name: keycloak
-    image: quay.io/keycloak/keycloak:20.0.1
+    image: quay.io/keycloak/keycloak:20.0.3
     restart: always
     privileged: true
     ports:
@@ -58,7 +58,7 @@ services:
       DOCKER_TLS_CERTDIR: /tls
   backend:
     container_name: backend
-    image: sealuzh/access-backend:re
+    image: sealuzh/access-backend:x
     restart: always
     privileged: true
     ports:
@@ -83,7 +83,7 @@ services:
       WORKING_DIR: /workspace/data
   frontend:
     container_name: frontend
-    image: sealuzh/access-frontend:re
+    image: sealuzh/access-frontend:x
     restart: always
     ports:
       - "80:80"
@@ -92,6 +92,8 @@ services:
       - ./access/certbot:/var/www/certbot
       - ./access/letsencrypt:/etc/letsencrypt
       - ./access/nginx.conf:/etc/nginx/conf.d/nginx.conf
+    environment:
+      DOMAIN: ${DOMAIN}
   certbot:
     image: certbot/certbot
     container_name: certbot
