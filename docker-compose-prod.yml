@@ -48,6 +48,7 @@ services:
     container_name: docker
     image: docker:dind
     privileged: true
+    init: true
     ports:
       - "2376:2376"
     volumes:
