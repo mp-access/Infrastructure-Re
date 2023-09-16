@@ -2,6 +2,7 @@ version: '3.9'
 
 services:
   postgres:
+    user: :1000
     container_name: postgres
     image: postgres:alpine
     restart: always
@@ -15,8 +16,9 @@ services:
       POSTGRES_USER: ${POSTGRES_USER}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
   keycloak:
+    user: :1000
     container_name: keycloak
-    image: quay.io/keycloak/keycloak:20.0.3
+    image: quay.io/keycloak/keycloak:22.0
     restart: always
     privileged: true
     ports:
@@ -45,6 +47,7 @@ services:
       CLIENT_SECRET: ${CLIENT_SECRET}
       PROXY_ADDRESS_FORWARDING: 'true'
   docker:
+    user: :1000
     container_name: docker
     image: docker:dind
     privileged: true
@@ -58,6 +61,7 @@ services:
     environment:
       DOCKER_TLS_CERTDIR: /tls
   backend:
+    user: :1000
     container_name: backend
     image: sealuzh/access-backend:x
     restart: always
@@ -82,7 +86,9 @@ services:
       DOCKER_TLS_VERIFY: 'true'
       DOCKER_CERT_PATH: /tls/client
       WORKING_DIR: /workspace/data
+      API_KEY: ${API_KEY}
   frontend:
+    user: :1000
     container_name: frontend
     image: sealuzh/access-frontend:x
     restart: always
@@ -96,14 +102,18 @@ services:
     environment:
       DOMAIN: ${DOMAIN}
   certbot:
+    user: :1000
     image: certbot/certbot
     container_name: certbot
+    ports:
+      - "80:80"
     volumes:
       - ./access/certbot:/var/www/certbot
       - ./access/letsencrypt:/etc/letsencrypt
     command: >-
-             certonly --webroot -w /var/www/certbot
-             --email ${KEYCLOAK_ADMIN} -d ${DOMAIN} --agree-tos
+             certonly -v --standalone
+             --email ${LETSENCRYPT_EMAIL} -d ${DOMAIN} --agree-tos
+             --non-interactive
 
 volumes:
   courses:

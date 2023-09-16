@@ -21,6 +21,7 @@ services:
     privileged: true
     ports:
       - "8080:8080"
+      - "8443:8443"
     volumes:
       - ./access/theme:/opt/keycloak/themes/access/login
       - ./access/realm.json:/opt/keycloak/data/import/realm.json

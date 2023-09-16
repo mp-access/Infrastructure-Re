@@ -30,7 +30,7 @@
   "enabled": true,
   "sslRequired": "external",
   "registrationAllowed": false,
-  "registrationEmailAsUsername": true,
+  "registrationEmailAsUsername": false,
   "rememberMe": false,
   "verifyEmail": false,
   "loginWithEmailAllowed": true,
@@ -562,6 +562,7 @@
       "protocol": "openid-connect",
       "attributes": {
         "oidc.ciba.grant.enabled": "false",
+        "post.logout.redirect.uris": "+",
         "display.on.consent.screen": "false",
         "oauth2.device.authorization.grant.enabled": "false",
         "backchannel.logout.session.required": "true",
@@ -732,7 +733,9 @@
       "publicClient": true,
       "frontchannelLogout": false,
       "protocol": "openid-connect",
-      "attributes": {},
+      "attributes": {
+        "post.logout.redirect.uris": "+"
+      },
       "authenticationFlowBindingOverrides": {},
       "fullScopeAllowed": false,
       "nodeReRegistrationTimeout": 0,
@@ -780,7 +783,9 @@
       "publicClient": false,
       "frontchannelLogout": false,
       "protocol": "openid-connect",
-      "attributes": {},
+      "attributes": {
+        "post.logout.redirect.uris": "+"
+      },
       "authenticationFlowBindingOverrides": {},
       "fullScopeAllowed": false,
       "nodeReRegistrationTimeout": 0,
@@ -829,7 +834,9 @@
       "publicClient": false,
       "frontchannelLogout": false,
       "protocol": "openid-connect",
-      "attributes": {},
+      "attributes": {
+        "post.logout.redirect.uris": "+"
+      },
       "authenticationFlowBindingOverrides": {},
       "fullScopeAllowed": false,
       "nodeReRegistrationTimeout": 0,
@@ -1522,13 +1529,13 @@
       "addReadTokenRoleOnCreate": false,
       "authenticateByDefault": false,
       "linkOnly": false,
-      "firstBrokerLoginFlowAlias": "first broker login",
+      "firstBrokerLoginFlowAlias": "EduID first broker login",
       "config": {
         "hideOnLoginPage": "false",
         "userInfoUrl": "https://login.eduid.ch/idp/profile/oidc/userinfo",
         "validateSignature": "true",
         "acceptsPromptNoneForwardFromClient": "false",
-        "clientId": "uzh_info1_staging",
+        "clientId": "uzh_ifi_access",
         "tokenUrl": "https://login.eduid.ch/idp/profile/oidc/token",
         "uiLocales": "false",
         "jwksUrl": "https://login.eduid.ch/idp/profile/oidc/keyset",
@@ -1544,24 +1551,82 @@
         "clientSecret": "${CLIENT_SECRET}",
         "passMaxAge": "false",
         "allowedClockSkew": "0",
-        "defaultScope": "openid,profile,mail,swissEduID,swissEduIDBase,swissEduIDExtended"
+        "defaultScope": "openid,profile,email,https://login.eduid.ch/authz/User.Read"
       }
     }
   ],
   "identityProviderMappers": [
     {
-      "id": "621ab334-4f4a-4336-9719-7e8473736c0f",
-      "name": "staff-supervisor",
+      "id": "b3b3511e-fae8-4216-9fe9-eca689c67bb2",
+      "name": "swissEduIDLinkedAffiliationUniqueID",
       "identityProviderAlias": "switch-edu-id",
-      "identityProviderMapper": "oidc-role-idp-mapper",
+      "identityProviderMapper": "oidc-user-attribute-idp-mapper",
       "config": {
-        "are.claim.values.regex": "false",
-        "role": "supervisor",
-        "claim.value": "staff@uzh.ch",
-        "claims": "{}",
         "syncMode": "FORCE",
+        "are.claim.values.regex": "false",
+        "claim": "swissEduIDLinkedAffiliationUniqueID",
+        "user.attribute": "swissEduIDLinkedAffiliationUniqueID"
+      }
+    },
+    {
+      "id": "22b2860d-984d-4c4e-b147-a92b24a00339",
+      "name": "given_name",
+      "identityProviderAlias": "switch-edu-id",
+      "identityProviderMapper": "oidc-user-attribute-idp-mapper",
+      "config": {
+        "claims": "[{\"key\":\"\",\"value\":\"\"}]",
+        "syncMode": "FORCE",
+        "are.claim.values.regex": "false",
+        "claim": "given_name",
+        "user.attribute": "firstName"
+      }
+    },
+    {
+      "id": "4e626557-a563-426d-bbbd-d4a3e6e51929",
+      "name": "swissEduIDLinkedAffiliation",
+      "identityProviderAlias": "switch-edu-id",
+      "identityProviderMapper": "oidc-user-attribute-idp-mapper",
+      "config": {
+        "syncMode": "FORCE",
+        "are.claim.values.regex": "false",
         "claim": "swissEduIDLinkedAffiliation",
-        "attributes": "{}"
+        "user.attribute": "swissEduIDLinkedAffiliation"
+      }
+    },
+    {
+      "id": "ff45127e-1442-44c4-a942-d022d54def0d",
+      "name": "swissEduPersonUniqueID",
+      "identityProviderAlias": "switch-edu-id",
+      "identityProviderMapper": "oidc-user-attribute-idp-mapper",
+      "config": {
+        "syncMode": "FORCE",
+        "are.claim.values.regex": "false",
+        "claim": "swissEduPersonUniqueID",
+        "user.attribute": "swissEduPersonUniqueID"
+      }
+    },
+    {
+      "id": "4119541d-62fd-4876-a1b9-a1ac35e2c30d",
+      "name": "family_name",
+      "identityProviderAlias": "switch-edu-id",
+      "identityProviderMapper": "oidc-user-attribute-idp-mapper",
+      "config": {
+        "syncMode": "FORCE",
+        "are.claim.values.regex": "false",
+        "claim": "family_name",
+        "user.attribute": "lastName"
+      }
+    },
+    {
+      "id": "4db4dd17-b1c0-4b48-b6fb-e2149bbb446f",
+      "name": "email",
+      "identityProviderAlias": "switch-edu-id",
+      "identityProviderMapper": "oidc-user-attribute-idp-mapper",
+      "config": {
+        "syncMode": "FORCE",
+        "are.claim.values.regex": "false",
+        "claim": "email",
+        "user.attribute": "email"
       }
     }
   ],
@@ -1730,7 +1795,7 @@
   "supportedLocales": [],
   "authenticationFlows": [
     {
-      "id": "d8dd7c7a-4f90-424d-8b68-11ff9cf201b6",
+      "id": "03172dc5-7937-4d34-9e88-2c3c7411d893",
       "alias": "Account verification options",
       "description": "Method with which to verity the existing account",
       "providerId": "basic-flow",
@@ -1740,14 +1805,14 @@
         {
           "authenticator": "idp-email-verification",
           "authenticatorFlow": false,
-          "requirement": "ALTERNATIVE",
+          "requirement": "DISABLED",
           "priority": 10,
           "autheticatorFlow": false,
           "userSetupAllowed": false
         },
         {
           "authenticatorFlow": true,
-          "requirement": "ALTERNATIVE",
+          "requirement": "REQUIRED",
           "priority": 20,
           "autheticatorFlow": true,
           "flowAlias": "Verify Existing Account by Re-authentication",
@@ -1756,41 +1821,7 @@
       ]
     },
     {
-      "id": "4b0d262e-85f7-4ba1-94fa-ad2a24d69359",
-      "alias": "Authentication Options",
-      "description": "Authentication options.",
-      "providerId": "basic-flow",
-      "topLevel": false,
-      "builtIn": true,
-      "authenticationExecutions": [
-        {
-          "authenticator": "basic-auth",
-          "authenticatorFlow": false,
-          "requirement": "REQUIRED",
-          "priority": 10,
-          "autheticatorFlow": false,
-          "userSetupAllowed": false
-        },
-        {
-          "authenticator": "basic-auth-otp",
-          "authenticatorFlow": false,
-          "requirement": "DISABLED",
-          "priority": 20,
-          "autheticatorFlow": false,
-          "userSetupAllowed": false
-        },
-        {
-          "authenticator": "auth-spnego",
-          "authenticatorFlow": false,
-          "requirement": "DISABLED",
-          "priority": 30,
-          "autheticatorFlow": false,
-          "userSetupAllowed": false
-        }
-      ]
-    },
-    {
-      "id": "c1dff041-4908-4e9d-9833-7d7974b64e68",
+      "id": "1b489f68-d40d-42fd-ad07-1f663f6c503a",
       "alias": "Browser - Conditional OTP",
       "description": "Flow to determine if the OTP is required for the authentication",
       "providerId": "basic-flow",
@@ -1816,7 +1847,113 @@
       ]
     },
     {
-      "id": "be77757d-5508-4834-95aa-323bc57eda3a",
+      "id": "5778850c-b409-4314-b50b-3682d54dcf26",
+      "alias": "EduID first broker login",
+      "description": "Actions taken after first broker login with identity provider account, which is not yet linked to any Keycloak account",
+      "providerId": "basic-flow",
+      "topLevel": true,
+      "builtIn": false,
+      "authenticationExecutions": [
+        {
+          "authenticatorConfig": "review profile config",
+          "authenticator": "idp-review-profile",
+          "authenticatorFlow": false,
+          "requirement": "REQUIRED",
+          "priority": 10,
+          "autheticatorFlow": false,
+          "userSetupAllowed": false
+        },
+        {
+          "authenticatorFlow": true,
+          "requirement": "REQUIRED",
+          "priority": 20,
+          "autheticatorFlow": true,
+          "flowAlias": "EduID first broker login User creation or linking",
+          "userSetupAllowed": false
+        }
+      ]
+    },
+    {
+      "id": "db311c21-791e-4f39-9709-4d3b314445dc",
+      "alias": "EduID first broker login First broker login - Conditional OTP",
+      "description": "Flow to determine if the OTP is required for the authentication",
+      "providerId": "basic-flow",
+      "topLevel": false,
+      "builtIn": false,
+      "authenticationExecutions": [
+        {
+          "authenticator": "conditional-user-configured",
+          "authenticatorFlow": false,
+          "requirement": "REQUIRED",
+          "priority": 10,
+          "autheticatorFlow": false,
+          "userSetupAllowed": false
+        },
+        {
+          "authenticator": "auth-otp-form",
+          "authenticatorFlow": false,
+          "requirement": "REQUIRED",
+          "priority": 20,
+          "autheticatorFlow": false,
+          "userSetupAllowed": false
+        }
+      ]
+    },
+    {
+      "id": "ec4eb4d1-ac35-4d80-9af2-6ee36a0035c2",
+      "alias": "EduID first broker login User creation or linking",
+      "description": "Flow for the existing/non-existing user alternatives",
+      "providerId": "basic-flow",
+      "topLevel": false,
+      "builtIn": false,
+      "authenticationExecutions": [
+        {
+          "authenticatorConfig": "create unique user config",
+          "authenticator": "idp-create-user-if-unique",
+          "authenticatorFlow": false,
+          "requirement": "ALTERNATIVE",
+          "priority": 10,
+          "autheticatorFlow": false,
+          "userSetupAllowed": false
+        },
+        {
+          "authenticator": "idp-auto-link",
+          "authenticatorFlow": false,
+          "requirement": "ALTERNATIVE",
+          "priority": 21,
+          "autheticatorFlow": false,
+          "userSetupAllowed": false
+        }
+      ]
+    },
+    {
+      "id": "75cb6be3-1884-4949-8a60-6725fdd7fe2d",
+      "alias": "EduID first broker login Verify Existing Account by Re-authentication",
+      "description": "Reauthentication of existing account",
+      "providerId": "basic-flow",
+      "topLevel": false,
+      "builtIn": false,
+      "authenticationExecutions": [
+        {
+          "authenticator": "idp-username-password-form",
+          "authenticatorFlow": false,
+          "requirement": "REQUIRED",
+          "priority": 10,
+          "autheticatorFlow": false,
+          "userSetupAllowed": false
+        },
+        {
+          "authenticatorFlow": true,
+          "requirement": "CONDITIONAL",
+          "priority": 20,
+          "autheticatorFlow": true,
+          "flowAlias": "EduID first broker login First broker login - Conditional OTP",
+          "userSetupAllowed": false
+        }
+      ]
+    },
+    {
+      "id": "9c3c3252-9cb7-4f61-8d46-6a5a1539a08c",
       "alias": "Direct Grant - Conditional OTP",
       "description": "Flow to determine if the OTP is required for the authentication",
       "providerId": "basic-flow",
@@ -1842,7 +1979,7 @@
       ]
     },
     {
-      "id": "43ce6c5d-6e62-49da-b5e2-6d4dbb5b95d8",
+      "id": "92e6220a-1736-4bd3-8d71-976cd8391533",
       "alias": "First broker login - Conditional OTP",
       "description": "Flow to determine if the OTP is required for the authentication",
       "providerId": "basic-flow",
@@ -1868,7 +2005,7 @@
       ]
     },
     {
-      "id": "91b95ac4-15e1-44a3-a347-20e89ff95514",
+      "id": "dd7a6f7e-4633-4192-8d6c-399f45988cdb",
       "alias": "Handle Existing Account",
       "description": "Handle what to do if there is existing account with same email/username like authenticated identity provider",
       "providerId": "basic-flow",
@@ -1878,7 +2015,7 @@
         {
           "authenticator": "idp-confirm-link",
           "authenticatorFlow": false,
-          "requirement": "REQUIRED",
+          "requirement": "DISABLED",
           "priority": 10,
           "autheticatorFlow": false,
           "userSetupAllowed": false
@@ -1894,7 +2031,7 @@
       ]
     },
     {
-      "id": "367740f2-f553-4332-ab26-b7814695a8fa",
+      "id": "54c4b240-cb76-497f-8c96-546f31610292",
       "alias": "Reset - Conditional OTP",
       "description": "Flow to determine if the OTP should be reset or not. Set to REQUIRED to force.",
       "providerId": "basic-flow",
@@ -1920,7 +2057,7 @@
       ]
     },
     {
-      "id": "3a706ee1-621f-4a8b-8f10-e0bdfc76fe62",
+      "id": "11c11377-696c-4ecc-8961-77a673093c57",
       "alias": "User creation or linking",
       "description": "Flow for the existing/non-existing user alternatives",
       "providerId": "basic-flow",
@@ -1947,7 +2084,7 @@
       ]
     },
     {
-      "id": "87580b03-7857-42cb-b9e6-25a4c551bf75",
+      "id": "633e96b7-7c67-44bd-81f0-52d31960a7e3",
       "alias": "Verify Existing Account by Re-authentication",
       "description": "Reauthentication of existing account",
       "providerId": "basic-flow",
@@ -1973,7 +2110,7 @@
       ]
     },
     {
-      "id": "96c51987-1563-470b-b72b-6a60bbf88e66",
+      "id": "03436309-2e4c-41d0-9461-88dd60b98292",
       "alias": "browser",
       "description": "browser based authentication",
       "providerId": "basic-flow",
@@ -2015,7 +2152,7 @@
       ]
     },
     {
-      "id": "a6d80176-d937-4a1f-ae94-d874dae4a425",
+      "id": "0ce9c449-82b7-41c6-977c-5373c9e4c906",
       "alias": "clients",
       "description": "Base authentication for clients",
       "providerId": "client-flow",
@@ -2057,7 +2194,7 @@
       ]
     },
     {
-      "id": "38d92ea6-7410-4025-b65a-b6d102358274",
+      "id": "52b9e6e4-d42f-4938-9a2a-5c64e2c88af0",
       "alias": "direct grant",
       "description": "OpenID Connect Resource Owner Grant",
       "providerId": "basic-flow",
@@ -2091,7 +2228,7 @@
       ]
     },
     {
-      "id": "03093e2c-3fbb-4937-ad7c-ca3d5667aada",
+      "id": "fa262cfc-b32c-49c1-b26f-25f1c252b41f",
       "alias": "docker auth",
       "description": "Used by Docker clients to authenticate against the IDP",
       "providerId": "basic-flow",
@@ -2109,7 +2246,7 @@
       ]
     },
     {
-      "id": "683d908c-27c4-46cb-9c7f-3fdf6f7ec49a",
+      "id": "22923a09-27fc-422b-a77a-fc96a4392874",
       "alias": "first broker login",
       "description": "Actions taken after first broker login with identity provider account, which is not yet linked to any Keycloak account",
       "providerId": "basic-flow",
@@ -2136,7 +2273,7 @@
       ]
     },
     {
-      "id": "ba1c4be1-fbb2-4e3f-9543-5acc82f209b4",
+      "id": "a9652e40-41d6-4a67-b30f-cee52554b339",
       "alias": "forms",
       "description": "Username, password, otp and other auth forms.",
       "providerId": "basic-flow",
@@ -2162,33 +2299,7 @@
       ]
     },
     {
-      "id": "43571d63-d961-47a2-9a42-14a8d7fe858b",
-      "alias": "http challenge",
-      "description": "An authentication flow based on challenge-response HTTP Authentication Schemes",
-      "providerId": "basic-flow",
-      "topLevel": true,
-      "builtIn": true,
-      "authenticationExecutions": [
-        {
-          "authenticator": "no-cookie-redirect",
-          "authenticatorFlow": false,
-          "requirement": "REQUIRED",
-          "priority": 10,
-          "autheticatorFlow": false,
-          "userSetupAllowed": false
-        },
-        {
-          "authenticatorFlow": true,
-          "requirement": "REQUIRED",
-          "priority": 20,
-          "autheticatorFlow": true,
-          "flowAlias": "Authentication Options",
-          "userSetupAllowed": false
-        }
-      ]
-    },
-    {
-      "id": "d58eaf5d-0298-4424-968d-b30b9bd72bff",
+      "id": "b9adc107-b688-43ae-b744-0f0f92f65ec0",
       "alias": "registration",
       "description": "registration flow",
       "providerId": "basic-flow",
@@ -2207,7 +2318,7 @@
       ]
     },
     {
-      "id": "12433439-49be-40e3-b79c-999d2d4cc5ac",
+      "id": "df6e43da-c29d-4d8a-88e1-b821f93844fa",
       "alias": "registration form",
       "description": "registration form",
       "providerId": "form-flow",
@@ -2249,7 +2360,7 @@
       ]
     },
     {
-      "id": "56e1a13b-7a68-445b-84ba-09e5ee79e827",
+      "id": "4138444e-4c1b-48e9-9b8c-95cfecf7ce27",
       "alias": "reset credentials",
       "description": "Reset credentials for a user if they forgot their password or something",
       "providerId": "basic-flow",
@@ -2291,7 +2402,7 @@
       ]
     },
     {
-      "id": "f5adeeb3-cbfe-449c-baac-702f29e135a9",
+      "id": "7520211b-b5e3-42bf-b0e4-29c9a2efa4cc",
       "alias": "saml ecp",
       "description": "SAML ECP Profile Authentication Flow",
       "providerId": "basic-flow",
@@ -2311,14 +2422,14 @@
   ],
   "authenticatorConfig": [
     {
-      "id": "c7b74b27-48cc-4611-8aa3-5d0a9483095b",
+      "id": "4bf30b37-35bc-4c21-aa4e-f3c6f763d9fd",
       "alias": "create unique user config",
       "config": {
         "require.password.update.after.registration": "false"
       }
     },
     {
-      "id": "a395644e-d01e-46a6-bcef-8fd29f1cdcc7",
+      "id": "368186f8-8be6-437c-8a33-905bd5a60e40",
       "alias": "review profile config",
       "config": {
         "update.profile.on.first.login": "missing"
@@ -2336,9 +2447,9 @@
       "config": {}
     },
     {
-      "alias": "terms_and_conditions",
+      "alias": "TERMS_AND_CONDITIONS",
       "name": "Terms and Conditions",
-      "providerId": "terms_and_conditions",
+      "providerId": "TERMS_AND_CONDITIONS",
       "enabled": false,
       "defaultAction": false,
       "priority": 20,
@@ -2449,7 +2560,7 @@
     "frontendUrl": "",
     "acr.loa.map": "{}"
   },
-  "keycloakVersion": "20.0.1",
+  "keycloakVersion": "22.0.3",
   "userManagedAccessAllowed": false,
   "clientProfiles": {
     "profiles": []
