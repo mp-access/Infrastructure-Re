@@ -515,6 +515,79 @@
     "realmRoles" : [ "default-roles-access", "supervisor" ],
     "notBefore" : 0,
     "groups" : [ ]
+  }, {
+    "id" : "e84ef90e-702a-4c65-ba9b-c17a60c3fc8d",
+    "createdTimestamp" : 1670253828435,
+    "username" : "not_swissEduPersonUniqueID@uzh.ch",
+    "enabled" : true,
+    "totp" : false,
+    "emailVerified" : true,
+    "firstName" : "by_swissEduPersonUniqueID",
+    "lastName" : "Test",
+    "email" : "by_swissEduPersonUniqueID@uzh.ch",
+    "credentials" : [],
+    "disableableCredentialTypes" : [ ],
+    "requiredActions" : [ ],
+    "realmRoles" : [ "default-roles-access", "student" ],
+    "notBefore" : 0,
+    "groups" : [ ],
+    "attributes": {
+      "swissEduPersonUniqueID": "123456789@eduid.ch"
+    }
+  }, {
+    "id" : "a72c5a1f-192a-4fcf-8f9e-411662bc5b1e",
+    "createdTimestamp" : 1670253828435,
+    "username" : "not_swissEduIDLinkedAffiliationMail@uzh.ch",
+    "enabled" : true,
+    "totp" : false,
+    "emailVerified" : true,
+    "firstName" : "by_swissEduIDLinkedAffiliationMail",
+    "lastName" : "Test",
+    "email" : "by_swissEduIDLinkedAffiliationMail@uzh.ch",
+    "credentials" : [],
+    "disableableCredentialTypes" : [ ],
+    "requiredActions" : [ ],
+    "realmRoles" : [ "default-roles-access", "student" ],
+    "notBefore" : 0,
+    "groups" : [ ],
+    "attributes": {
+      "swissEduIDLinkedAffiliationMail": "fname.lname@uzh.ch"
+    }
+  }, {
+    "id" : "130744c2-c9bf-4000-abd8-0c8d9ae04a84",
+    "createdTimestamp" : 1670253828435,
+    "username" : "not_swissEduIDLinkedAffiliationUniqueID@uzh.ch",
+    "enabled" : true,
+    "totp" : false,
+    "emailVerified" : true,
+    "firstName" : "by_swissEduIDLinkedAffiliationUniqueID",
+    "lastName" : "Test",
+    "email" : "by_swissEduIDLinkedAffiliationUniqueID@uzh.ch",
+    "credentials" : [],
+    "disableableCredentialTypes" : [ ],
+    "requiredActions" : [ ],
+    "realmRoles" : [ "default-roles-access", "student" ],
+    "notBefore" : 0,
+    "groups" : [ ],
+    "attributes": {
+      "swissEduIDLinkedAffiliationUniqueID": "123456789@uzh.ch"
+    }
+  }, {
+    "id" : "52628aa9-f80b-4822-a8ce-cfc246146fba",
+    "createdTimestamp" : 1670253828435,
+    "username" : "not_email@uzh.ch",
+    "enabled" : true,
+    "totp" : false,
+    "emailVerified" : true,
+    "firstName" : "by_email",
+    "lastName" : "Test",
+    "email" : "by_email@uzh.ch",
+    "credentials" : [],
+    "disableableCredentialTypes" : [ ],
+    "requiredActions" : [ ],
+    "realmRoles" : [ "default-roles-access", "student" ],
+    "notBefore" : 0,
+    "groups" : [ ]
   } ],
   "scopeMappings": [
     {
