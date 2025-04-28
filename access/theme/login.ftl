@@ -2,7 +2,7 @@
 <@template.registrationLayout ; section>
     <#if section = "header">
         <span>Sign in to</span>
-        <span style="color: var(--bs-purple);">My ACCESS</span>
+        <span style="color: var(--bs-purple);">ACCESS</span>
     <#elseif section = "socialProviders" >
         <#if social.providers??>
             <#list social.providers as p>
