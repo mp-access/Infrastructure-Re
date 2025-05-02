@@ -2,7 +2,7 @@ services:
   postgres:
     user: :1000
     container_name: postgres
-    image: postgres:alpine
+    image: postgres:16-bookworm
     restart: always
     ports:
       - "5432:5432"
@@ -48,6 +48,7 @@ services:
     user: :1000
     container_name: docker
     image: docker:dind
+    restart: always
     privileged: true
     init: true
     ports:
@@ -115,3 +116,4 @@ services:
 
 volumes:
   courses:
+
