@@ -36,5 +36,14 @@ services:
       KEYCLOAK_ADMIN_PASSWORD: ${KEYCLOAK_ADMIN_PASSWORD}
       CLIENT_SECRET: ${CLIENT_SECRET}
 
+  llm-service:
+    container_name: llm-service
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - "${LLM_MICROSERVICE_PORT}:${LLM_MICROSERVICE_PORT}"
+
 volumes:
   courses:
