@@ -18,7 +18,7 @@ async def lifespan(app: FastAPI):
 app = FastAPI(lifespan=lifespan)
 
 class Implementation(BaseModel): # expected structure of the JSON payload that the backend will send to /get_embedding/
-    code: str
+    codeSnippet: str
 
 @app.post("/get_embedding/")
 async def get_embedding(implementation: Implementation):
@@ -26,7 +26,7 @@ async def get_embedding(implementation: Implementation):
         raise HTTPException(status_code=503, detail="LLM model is not loaded or ready.")
 
     try:
-        code_embedding = llm.calculate_code_embedding(implementation.code)
+        code_embedding = llm.calculate_code_embedding(implementation.codeSnippet)
         return {"embedding": code_embedding}
     except Exception as e:
         print(f"Error during embedding calculation: {e}")
