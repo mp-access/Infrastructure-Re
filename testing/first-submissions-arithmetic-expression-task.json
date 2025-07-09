@@ -1,0 +1,3124 @@
+[
+  {
+    "userId": "578124e8-a0f2-4795-9466-ca866ae113ee",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d*(a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "4c7c180c-b06d-4d18-8c6a-e8d8b8548993",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a-(b**2/(c-d*(a+b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "8b497d1d-5e07-4e67-b038-2134b7439d58",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a-(b**2 / (c-d*(a+b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "f180b1c0-d1c1-4635-bcb6-215c5c840b0f",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    result = a - (b**2 / (c - d * (a + b)))\n    return result\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "40d1d076-df3f-49e4-908c-06c41a8f677f",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "d6320b60-e79a-42e5-af4f-457ea194c63d",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2) / (c - d * (a + b))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "74024a92-cc13-4553-a2a6-6d62fb37c161",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c-d*(a+b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "c79f97d3-77f1-42b0-b853-d6c0bf62944e",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "ecb993a6-8ae1-47de-98c3-26037b54ec90",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "227f877f-c9d7-43c1-967b-6d9326d5202b",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a-(b**2 / (c-d*(a+b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "88599412-c8d8-4807-ad95-89f30c17a645",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "7899b339-86c8-4f38-8099-152d583f0763",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "234e3d87-7972-4765-b35b-88076f8c003d",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "3ce8f0e7-6a39-462d-ac80-df949c458b88",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "399269f1-8e01-449d-9202-aa3c1eadf91c",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "ca7ce5ed-3645-4f17-9d28-8aed5baf0876",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "5e44fc78-9a43-44c7-a598-d16b0a8c717c",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    x = a - (b*b / (c - d * (a + b)))\n    return x\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "68947dfb-24bc-4f58-8762-596910fc8124",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a-(b**2/(c-d*(a+b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "83d79d0a-542a-4798-bfc6-2e33c38dc709",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    x = a - (b**2 / (c - d * (a + b)))\n    return x\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "08cd00e2-1b59-494b-8071-db1779db2548",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "197bc4ef-6bd3-4044-a2f7-6daae69731de",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "1e385c9d-c401-4418-9331-60752c4fe7da",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "09f6ea07-321c-49d1-9974-8cda817b5502",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "b02a421d-fba2-4728-99c3-d70376dc498c",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    solution = a - (b**2 / (c - d * (a + b)))\n    return solution\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "c5ade6cb-4acc-4c8d-8725-90688a9175a5",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "facb8814-3d6c-4702-8d3b-20cac0f99caa",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a-(b*b/(c-d*(a+b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "959e7579-3c67-43e2-a229-3c5df3a42c30",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "acba6c7f-fcae-434e-a5cf-c98ca5a04232",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "bcbfcdcd-f0b7-4e6c-bd3b-eb1382ea7dd6",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return (a - (b**2) / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "9d33a34a-507b-49d1-9411-e9332a1eeebc",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a-(b**2/(c-d*(a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "941875cc-ed11-4209-924b-1ec4e7e6e3f9",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "c09de79e-f211-4b2a-88fd-cec689011bd8",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b ** 2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "fb20c00e-0ef5-4052-8aab-e063b798a8c0",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return (a - (b ** 2 / (c - d * (a+b))))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "2919253d-e844-4c18-9a91-f6abbf5f720f",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "2b314d92-3fab-4254-9d33-08ff4580a77f",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a-(b**2/(c-d*(a+b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "0bc5ca4b-bd79-4b35-9f88-9bc6c5e48cba",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "0819c790-f7c5-45b8-8800-c29212d21b88",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a+b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "04e56d0b-ed6c-40af-b5b0-7a6f55bb4231",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * ( a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "64b3097e-d9d6-4195-a527-9434505e5257",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "01e89cf4-efe5-4a71-816c-960efd9c066f",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "5268d7ee-b5f6-4807-b1d2-8853c385ea4a",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "c0ec428e-8bd5-4708-8466-6284070c154f",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "80650f8c-7705-43c9-ba51-e686d266f350",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "7355a416-ea81-4500-b010-4413754434d2",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a-((b**2)/(c-d * (a+b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "69fa7c31-2b52-4e04-82c5-6dc9ae353ce8",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "b7af9608-ccc3-48d0-b6df-4600853fe09d",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a-(b**2/(c-d*(a+b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "9a2a6cc0-bab7-409a-a8bf-c757e4ffe1e9",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "c5362e64-12da-4ec3-97a9-91d697d6c16d",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a-(b**2/(c-d*(a+b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "30ce229c-0d0e-40ae-8175-9c98b97e5843",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return (a - (b**2 / (c - d * (a + b))))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "bae641e5-6ae9-4b4b-9774-22cd5d3e2036",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "c535ac6b-0613-475d-9ac5-e53e52b74dba",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    result = a - (b**2 / (c - d * (a + b)))\n    return result\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "a04039e2-65f7-489f-9b3e-6aed85c61781",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a-(b**2/(c-d*(a+b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "e2bc9234-f2ba-4d0a-9088-665694640a8e",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "eef25f75-dea3-4f74-b108-a1fff4f6a367",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "e82dd14d-789a-42e3-92dd-42bf36fcfdcb",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "d7d3a678-b0b1-4040-807b-b8b374c73d6f",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    result = a - (b**2 / (c - d * (a + b)))\n    return result\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "2976f2e8-0da9-4bc1-a0c5-5f17830a796a",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "702dc571-c912-4870-9c15-0278f8dc1dcc",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "180dd76b-8ef8-4561-a01a-20aa6a50a9bd",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "d5a8c3a1-bcda-481e-a979-3935c114c361",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "fbbff50d-db08-4d9d-ad02-b664d03826f6",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "b5a081fa-f805-48a2-9e01-48a34e2d872a",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "0a6fdf4c-f4b1-4e36-9204-e392b2d34738",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - ((b**2)/(c-d*(a+b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "a2a18063-2bb3-48fe-aa1b-379a9d5605bc",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "3137ffa9-f6f2-48d9-9954-9416d9727fb5",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "d8604e99-b434-47ab-932c-d62c8289dead",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - ((b**2)/(c-d * (a+b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "d80c2632-41cd-4557-a9fe-550b6147e151",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return (a - (b**2 / (c - d * (a + b))))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "ab41cb13-b194-4db7-bf9f-e61d721a2801",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "6ab29827-a2fe-467a-a8d2-145e6f03fe20",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "c5086fa5-7672-4d7e-84fa-6380aed30243",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\na = 1\nb = 2\nc = 3\nd = 4\nresult = calculate(a, b, c, d)\nprint(result)"
+    }
+  },
+  {
+    "userId": "0d9f160b-6cb5-4c90-af9e-f1eba8ec0bfd",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    res = a - (b*b / (c - d * (a + b)))\n    return res\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "e46823ec-6ebb-4d2b-b17e-959ebe6bda4c",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return (a - (b**2 / (c - d * (a + b))))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "a096978c-87c7-423b-8507-1848f5b7252f",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "638ede41-9737-4b21-802d-3d84853f8349",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "2bcb312e-490b-45b2-9c9f-65123c6f7865",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c -d * (a+b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "f6075021-f734-4be6-85a9-bf612529367e",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "a9fd9ce1-4b49-4c3d-ac04-332bdcfb216a",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a-(b**2/(c-d*(a+b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "2fee9013-e0a7-4588-a7b5-9ee9e9ba608e",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    result = a - (b**2 / (c - d * (a + b)))\n    return result\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "2bedbe6f-ef28-4493-8b9a-38ece194d718",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a+b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "1313acfd-9066-4ef4-b0c7-8ecf31719468",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "9666f405-0396-4145-a4ec-af680c0b0a38",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "74b5d08e-941c-418e-bfdd-3a642cce95a7",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a=1, b=2, c=3, d=4):\n    return a -(b**2/(c-d*(a+b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "ca807b2d-bc4c-4cad-8d6b-42660bf0772f",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "6759b853-ec60-4640-97ae-a1720ebaea71",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "bfb21c19-6f47-4f21-92df-b60f10856e29",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    f = a - (b**2 / (c - d * (a + b)))\n    return f\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "becb1d1c-5d75-4c43-94b0-0f6091f86b5e",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "9cb291ed-d3f2-4df5-8db4-fcf83be59fc8",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - ((b**2)/(c-(d*(a+b))))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "52ad5913-7b23-455b-83f0-861563854f21",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a-(b**2/(c-d*(a+b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "7d6161f5-4fa9-417c-804d-f153e69ab75d",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return (a - (b**2/ (c-d*(a+b))))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "4f9293ab-e392-4638-9ee0-cd34ef11d119",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "b8a80523-2405-423c-b08e-227b7e49360d",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2/(c-d*(a+b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "8db3b8a1-08ab-4847-a69e-59af88890b0f",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "a9f4ab5e-ee83-479c-9275-0abf79bb2cec",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "671fd554-8b84-412f-9655-be8b2f4d8e6b",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "ce4b59f7-2f36-4ceb-bfb5-e32afc85185f",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return (a - (b*b / (c - d * (a+b))))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "e050ba9e-3f1b-472c-a400-0473f67ea2ff",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return (a- (b**2/(c- d * (a+b))))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "98b806f7-daaa-49bb-9340-d687f61445ab",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\n    calculate(1, 2, 3, 4)\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "6c90ebf3-d0a8-4b1f-8e3a-5cade1db4133",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b ** 2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "6217cbe8-0d38-45c2-a379-5ec269f13b25",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a-(b**2/(c-d*(a+b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "968ad2e4-7bd2-4de0-91e9-63495895ea6c",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "23a7d52e-6e5e-40a2-ab69-05b588933f1e",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "f4656626-d698-4540-b961-6671f6b3e234",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a-(b**2/(c-d*(a+b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "8d68b2e5-8e62-4dfc-89ae-576e252195da",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "5205babb-795a-49f5-a1f6-cce0bf5a71d8",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "e49ed2f9-f7e0-4152-9286-734b4a00d512",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return (a - ((b**2) / (c - (d * (a + b)))))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "915f7521-4364-41bd-a8aa-a25640ece33d",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a+b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "251dbf3d-65a8-438a-a106-c1b8e5df8314",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "7880b16e-a6b2-4670-981c-06f4c8795c93",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "c2005547-8b2a-4a6f-8eac-ed2583da3550",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "a6b88d91-d7d0-4eeb-9aa4-415e01209438",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b )))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "a5b97804-bcf6-4c3d-8805-26b54ed5a970",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a-(b**2/(c-d*(a+b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "37a84236-eabf-4fb0-9f70-9f1b4237d694",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a-(b**2/(c-d*(a+b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "f2ed88aa-117e-4e87-bc37-c1f426518b02",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return (a- (b**2 / (c-d * (a+b))))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "a607e9e3-9003-4236-bb79-091e5f08092b",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - (d * (a + b))))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "16c05d3b-6ac9-476e-8d5e-e3ad3b6993a3",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return (a)-((b)**2/((c)-(d)* ((a)+(b))))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "7dfdd93b-708f-43cb-9187-c495ce7abd30",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2/(c-d*(a+b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "2d0925e2-5786-4715-a7f1-d07abb58b7f9",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    x = a - (b**2/(c - d * (a + b)))\n    return x\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "d0d46c44-7af8-44e8-a24d-57b6efa61a04",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2/(c-d*(a+b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "41026812-a7f3-449f-b279-4dc6b36cc68f",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a +b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "d58a0167-d125-4773-9d6e-e6ad15b63d1c",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "d579be92-4185-4837-9350-48c3e1d08a16",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a-((b**2)/(c-d*(a+b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "43311905-ed1d-407b-833b-9d2301a46811",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "e16d6660-a5c5-49a9-80f2-d32ee12f7381",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return (a - (b**2 / (c - d * (a + b))))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "47682523-215e-433b-8a90-2221671753e5",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "cd6c9e99-a284-4e88-a717-b3107b02a5b4",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - ((b**2) / (c-d*(a+b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "6df5d734-349e-4d24-93fb-e00f4d3c0a20",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "27172166-da29-434a-a480-a9ac22a1cf36",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c-d * (a+b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "b778cb89-bd16-4318-9622-d907c6bdd2ff",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return (a - (b**2 / (c - d * (a + b))))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "37b4ca3f-2511-45f7-b91a-fc4495139a8f",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a-(b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "114b0a04-9fbf-40a3-a984-e48450db5669",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d* (a + b)))\ncalculate(1, 2, 3, 4)\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "9ee2c9ca-13bf-4ce9-9f15-8d25528cf53d",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a-(b**2/(c-d*(a+b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "90816320-f7a1-456e-95f9-ee5576e49295",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a-(b**2/(c-d*(a+b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "2e422dd4-bf94-445e-8c8c-3190301d6bdf",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a-(b**2/(c-d*(a+b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "84710570-f49b-4cf6-a08c-cae5d6fef1ea",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    value = a - (b**2 / (c - d * (a + b)))\n    return value\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "2403456e-f7c8-4625-b2a8-b30cfb4b1aa2",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "52a324db-7c11-4174-9b8e-9f66c9234e2a",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a-((b**2)/(c-d*(a+b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "89ea28f0-7194-4db3-9095-fc6d4e16cba1",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "d8f2cff2-2a66-4d9f-82bb-02f5a5bd3a0e",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a-(b**2 / (c-d*(a+b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "8eb444c2-5c24-458e-bee6-05c998bb33dd",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return (a - (b**2 / (c - d * (a + b))))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "044b38b8-6587-4601-b389-4b57028f07a0",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return(a - (b**2 / (c - d * (a + b))))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "f7a76d49-1d05-4c66-bccc-d79aff484f1f",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - (d * (a + b))))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "bcfb5702-841a-4963-a291-3f0d48fded6f",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a-(b**2/(c-d*(a+b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "ed3da97f-5c9d-4835-a67a-1b24efa4ad92",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b ** 2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "8562ff3d-1527-431b-884c-8f5c6e857968",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - b**2 / (c-d * (a+b))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "78c7d0ca-1a0f-4fd7-8b37-5c87e48814a1",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - ((b**2)/(c-d*(a+b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "dbd46c9b-897b-4a2c-a2a4-7ea83bcfdbad",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return (a - (b**2 / (c - d * (a + b))))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "3cdf2ddf-2263-465b-b767-14e7cde221dd",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "96ab581e-ff1a-46d8-8351-ffcdca5db5d1",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "06ac1d10-6042-4ca9-b856-2de68d5e6e16",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a-(b**2/(c-d*(a+b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "5ed06246-e333-4a7f-8edd-d1cb3b0d0e3e",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    result = a - (b**2 / (c - d * (a + b)))\n    return result\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "1b4de294-2cd3-4a75-9d1f-259f85588dd6",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a-(b**2/(c-d*(a+b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "d09dfc39-681a-4f73-9c18-3d2f7381bd28",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "1fff612a-bcf4-48c4-9719-9084de28f21e",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 /(c-d*(a+b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "e451d668-dd96-44be-ba8f-d49f5c3311e1",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "0bd357f6-5fc1-4f60-88cd-c2dda2d678c7",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "aa4b951c-e0b2-4abd-9420-c0c4f32855aa",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "cdf437a1-bc94-41e8-885a-8c5d814e99ea",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a-(b**2 / (c-d*(a+b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "c2ffaddc-5f8c-473f-825b-96429e29fdb1",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a-(b**2/(c-d*(a+b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "11cf5a37-57b1-4e87-b3cf-6e0c03d3dea5",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "1fe80cb5-2998-4d97-8460-4288e2ef8c3c",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "1a41892e-508f-4f55-99ed-a8750eddd6dc",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "62ca6add-84d2-44e2-b8b4-45536a462d75",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - b**2 / (c - d * (a + b))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "c49b7f99-1e13-41b1-a540-536713515500",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a-((b**2)/(c-d*(a+b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "17f76bdd-8aef-4cf5-ad9d-00518f519471",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * ( a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "da63b9a0-005d-451f-b7a6-4e84bf5d2057",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a-(b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "07a8d1d2-9131-4cfc-b785-be6a55b7fcf1",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "b4f47a03-76c7-4a66-8d40-cb131fb5b855",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - ( b**2 * (c - (d * (a + b)))**(-1) )\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "5775c6de-b4d4-4917-bbec-c6fc20b1ea89",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "85582e71-052a-4976-b0d5-f064526ac24d",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - ((b**2) / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "1881f534-f646-4a34-ab41-425fee0c0b0c",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "f797387a-2b0e-43a1-af01-e3772eb724bc",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return(a - (b**2 / (c - d * (a + b))))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "b2c6fbdb-4821-4189-8a9f-2ece6ec7e0c1",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 /(c - d *(a+b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "b64fa18a-4951-49b7-8c37-a9583419d6cb",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "fe674a80-4c30-4092-a3ca-f451b79ce9c5",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "4bf52dd0-0568-4e36-ab48-22a2654457b0",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - ((b**2) / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "2844f60c-9de7-45f2-a724-39f52e35110c",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "43456965-43a3-45dd-bf3e-9443b5103a72",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "05455860-ca89-458f-8c67-45b223a4fcf9",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    result = a - (b**2 / (c - d * (a + b)))\n    return result\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "b847aba9-3127-4d88-b1d9-213de90bbbb6",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - ((b ** 2) / (c - d * (a + b )))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "a1a33969-5d4f-4ef0-9269-27d546af92cf",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a-(b**2/(c-d*(a+b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "bd7f0e78-d7bc-4c5c-8784-e9fc529da6be",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a-(b**2 / (c-d*(a+b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "31f4805a-770c-4e68-a4da-5bc793f5b289",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "59dce739-f37b-44b6-8fa3-f6c70f6bede1",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a-(b**2 / (c-d * (a+b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "c1e7abdd-5e92-4b2b-aa45-9a7d9a655db6",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c-d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "0673f72c-0754-41aa-8dc4-c0e36ccda859",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))\nprint(calculate(10, 20, 30, 40))"
+    }
+  },
+  {
+    "userId": "fb0f24b9-e148-4eb1-b8d0-603a3efa37d6",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "35822ec0-0f6d-4fd0-a7f1-fd087e652024",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "7d3930dd-5fee-4271-b94e-068f41e4371b",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b ** 2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "fb0b30eb-4fff-41e9-a695-4589f920ed2a",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a-(b**2/(c-d*(a+b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "1f120d6e-e7b4-475a-8860-f8b3f0285a58",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c -d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "f6188fd9-da3c-4b6b-aa6f-15e4547504c7",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "303fe9c7-dd1d-4312-9a7c-4dc6b14545c1",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "6d2e817d-f208-4634-8e7d-6bc548f1d03c",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "eca283ca-ae9c-4879-9b9f-08e15f88d78b",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    s = a - (b**2 / (c - d * (a + b)))\n    return s\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "a0d568e0-cd52-4661-9da3-039c42117765",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    result= a-(b**2/(c-d*(a+b)))\n    return result\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "71fee523-f82b-4423-87e6-00175c5363d1",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "0df51ce0-dd17-4797-afe7-aafbf4df3e2d",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b ** 2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "896742f4-2fdf-4680-89a9-093f999049ff",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    result = a - (b**2 / (c - d * (a + b)))\n    return result\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "49a7d277-f37d-4f4f-9824-102789d25a98",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c-d*(a+b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "48e764df-bc27-4c10-b7b2-ae8dba7a53c2",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b ** 2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "2c592716-b204-4d8a-805a-1caabf4943e4",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "32962187-8ff3-4753-b5ff-2f2f1fe908f6",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return (a-(b**2/(c-d*(a+b))))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "732e8e0e-e9b6-4dc3-a933-a4d566ce21b2",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a-(b**2/(c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "82e8b4bb-5ca9-4169-a3c0-1f27d7f70a6f",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a-(b**2/ (c-d*(a+b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "72e49a0a-6114-4096-9e39-6539490b66c2",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    solution = a - (b**2/(c-d *(a+b)))\n    return solution\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "bd194795-8ab5-40f3-9c35-2b41a0b8569c",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "9f674f28-1d8a-404a-8c4d-cf7eca2f278a",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 4, 3, 4))"
+    }
+  },
+  {
+    "userId": "0d229f5d-8bd8-4e73-92c9-23ad0da8d230",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    gleich = a - (b**2 / (c - d * (a + b)))\n    return gleich\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "f5a2e8ae-a80e-4148-90ac-eaf03762db16",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "824d285c-3f03-4f4c-9395-af22db0eeb59",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a-(b**2/(c-d*(a+b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "b5dcde0b-d6e1-471f-8ba2-af33cf5e32f6",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "7b288390-7a65-4c7b-bed2-44b1349185dc",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return 0\nprint(calculate(1, 2, 3, 4))\ndef calculate(a, b, c, d):\n    return a - (b ** 2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "e95b171f-193f-4ff6-94d9-0906dfec895d",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "0dd5c2ce-f97d-4a5e-9401-73ab2841e6eb",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return (a - (b**2 / (c - d * (a + b))))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "964b9b26-6ddf-48a8-b0d3-92d31a5eac1a",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a-(b**2/(c-d*(a+b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "0fb9baba-62f1-4616-a2a5-bc6016797b33",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d*(a+b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "f0be2330-51cb-48fe-bab7-51be8243a2ed",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a-((b**2)/(c-d*(a+b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "3a30eff7-d101-4849-b4ed-ce3e1ce5e17a",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    result = a - (b**2 / (c - d * (a + b)))\n    return result\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "b6b353b4-936d-4374-bd6c-5e51f8539d5d",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "e2b90966-4918-4eef-8f79-cf67138cb9f2",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c-d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "f2a926d6-dbcd-4949-8dd9-a032795e0c35",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    first = c - d * (a + b)\n    second = b ** 2 / first\n    result = a - second\n    return result\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "785b5b05-b92f-4200-bcaf-707cedcad18f",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return (a - (b**2 / (c - d * (a + b))))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "95af4f7b-e263-4f21-afe2-5ac10c093648",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "0796ea79-9d1b-4c91-8da5-b70b2379e27a",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a-(b**2 / (c-d*(a+b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "f8540f27-5f16-4501-b471-1c1bf0fe47aa",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "8389b627-6ca4-4ad2-b887-874832ab3543",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a-(b**2/(c-d*(a+b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "34ba107b-3123-496a-bd96-ebdc7e507a3f",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return (a - (b**2 / (c - d * (a + b))))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "1c9d8e9e-e575-4fe1-9345-d8ed0adb595e",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c-d*(a+b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "02501fab-9a3d-4742-8326-aa0d194c6d8f",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c- d*(a+b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "fc6492b6-8ce1-4895-bbd9-aecf1d7504a2",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    res_a = a + b\n    res_b = d * res_a\n    res_c = c - res_b\n    exp_b = b * b\n    res = a - (exp_b / res_c)\n    return res\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "d542fec0-8860-4f61-b783-6c8511b79f88",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 /(c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "eb632f4e-5bd6-4cf1-9235-20a0eb608fcf",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    temp1 = (c - d * (a + b))\n    temp2 = b**2\n    temp3 = temp2 / temp1\n    return a - temp3\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "f8eda16e-df65-40f7-be6a-6a2b1af5ae77",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    formula = a - (b**2 / (c - d * (a + b)))\n    return formula\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "bfa1d308-b85e-4343-808e-bca208cbc758",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - ( b**2 / (c -d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "fb6dd6ea-c2a3-497b-887f-df3ae0f65182",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    result = a - (b**2 / (c - d * (a + b)))\n    return result\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "0a68d12a-3235-42e7-ad9a-63654f4c3f6f",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2/ (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "4fa76b1c-5544-4190-b25e-abe1ed6e84a1",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return (a - (b**2 / (c - d*(a + b ))))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "5ba406e5-2d05-4ebd-89a0-2caa27aeca63",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return (a - (b**2 / (c-d * (a + b))))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "5594ebc8-4d6b-48cc-9df5-c9620a14ecd1",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b*b / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "70f01896-0e38-4ccb-9bc5-089ffca9ed45",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - ((b ** 2) / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "c533a9f8-3c02-4773-b496-d9066a668ee5",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 /(c-d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "59771518-3ac1-4d16-9593-9bb0ed954498",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "1997e3d0-9f7e-494a-a65b-b001eea724de",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "f47e778d-e1d4-4b66-921a-2a336f87c164",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "367691ed-7618-4273-a375-42020c63bb5b",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a-(b**(2)/(c-d*(a+b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "156386a9-9bf1-490a-9fd2-5f764d9a3df8",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c-d*(a+b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "0e892fc9-8267-45ee-b4bc-467574668751",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c-d *(a+b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "630f4bd0-26fa-4f2f-8f3f-b68605350737",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (pow(b,2) / (c - d * (a+b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "279e6007-695a-46e6-8225-221b162d57f4",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "8a40ebf0-6378-48f1-bfab-a45fa58bd903",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "118413ad-4da8-415c-9c18-d45c725c8e47",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / ( c - d * (a+b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "0220be7c-8486-4200-8570-67d62cbb5e21",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    e = 0\n    e += a - (b**2/(c-d*(a+b)))\n    return e\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "ef9c2c19-dd0c-4123-8e79-3609e2093da1",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "122657f9-4a5a-4a29-9a58-844661cef0bc",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    res = a - ( b**2 / (c - d * (a + b)))\n    return res\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "d4782efb-d1bb-496a-b4d5-bf359d3eb96a",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2/(c-d*(a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "46515fcf-9bf8-4cd3-96aa-e22a33599f69",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a-(b**2/(c-d*(a+b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "09d107d4-3c90-418c-96ec-c3f750042cd9",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a-(b**2/(c-d*(a+b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "967a0d8f-f7d4-4845-9c0b-f5593059cf4d",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "b5a1a407-de27-4e79-9e39-b8c7cc52fee5",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2/(c-d * (a+b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "6edc163d-0fb7-4a01-a3be-923e58fd0854",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - ((b*b) / (c - (d * (a + b))))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "56f86ca0-e20b-4aa8-a9ad-1b2e0667e726",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "53cc5a0a-191d-4d8f-8972-beb6433fc78d",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return_value = a - (b**2 / (c - d * (a + b)))\n    return return_value\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "af95963f-49e8-4b41-b278-2b49fcd5af2c",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "06eeb972-be09-4769-ae40-43a64a6dfa90",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c-d*(a+b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "d2c3654e-d5eb-4280-9304-a338d9ceb4f6",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - ((b**2) / (c - d * (a +b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "f4cc63d2-5f35-481e-921e-478c06da6b6c",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return (a - (b**2 / (c - d * (a + b))))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "d89e1c36-3d8e-4b41-a1f1-91a5ed2c8c32",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    res=a-((b**2)/(c-d*(a+b)))\n    return res\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "3d832b53-2884-4780-b2ec-c3433848ff5d",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a-(b**2 / (c-d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "f0a31da6-ff4a-4a68-b38c-cb7d2e402407",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "86f22f1e-43e0-485c-9d1f-c4b3cd1ebc72",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    result = a-(b**2/(c-d*(a+b)))\n    return result\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "38c9ec99-42c4-454d-b00b-cb58502e11c4",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "392cc5f6-c6bf-4344-844d-56ef3f9617a0",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - (d * (a + b))))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "5a9ea8d0-66c1-444d-8eab-cfd0b9271304",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "3093b64a-5cc9-47c3-9f69-635bc7202450",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "9d1004c5-4688-4adc-9db7-946e6f9d8662",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a+b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "4d4b3ae1-0c00-4d61-a6f7-ef526146479b",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "a51d922c-ca06-4949-aa3d-033c342390b8",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b ** 2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "d0addc14-d593-45b4-b4c3-5eb039b75560",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2/(c - d *(a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "dece946a-0064-4b90-b806-0c3b817e6b70",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "839a16ad-4f97-4ed9-ae88-ce3719f84792",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - ((b**2)/(c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "5ba7426e-1286-4a14-b1a3-feeeb49675a0",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - ((b**2)/ (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "9b83d1e7-8cf4-42c8-9b95-cb3587f193d6",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "988ac18f-aa73-4c37-9a7e-9313f8ed26b2",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "06f83a1e-69d4-4d3d-b08a-f72333f40ba6",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "f1de6857-b9cf-4b13-921d-a050c8d22ad1",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return (a - (b**2 / (c - d * (a + b))))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "738f082b-9ba6-4df7-962f-0cf2ac13ded9",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "4ac4ee1d-253d-4ebb-88cc-46fdb0facaf9",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "3254c830-1cb9-4857-8f4c-ec8dd82b8841",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a-(b**2/(c-d*(a+b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "62958084-882f-46c0-9361-3f8e57fe72b6",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "b4dbb83f-f710-4185-964e-f447f07425be",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    sol = a - ((b*b)/(c-d*(a+b)))\n    return sol\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "d04d54e6-45b1-48c0-a9f8-422de2e15291",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "77f2bc65-f1cb-4e72-b685-259b46ef2c5e",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    b_squared = b ** 2\n    denominator = c - d * (a + b)\n    result = a - b_squared / denominator\n    return result\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "d312042b-12b2-4cff-bd5c-debf7222d5e4",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "0c695d63-a3ad-42c1-bd92-775739cb4fa2",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "a83926e7-d03b-43a9-9c13-22174f5f2d5e",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d*(a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "ac30292d-fccc-4f09-8afa-52cbe24d3c48",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "dc95aaf0-5210-4668-9f95-2c22cc9c6f6c",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a-(b**2/(c-d*(a+b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "277d8bee-6616-4181-91b4-2fb276c320c3",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "8046a911-c40a-4d83-953b-7439f95d4de9",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * ( a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "b32c43e5-0336-4bfb-a4a6-ce83aa08719c",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return(float(a - (b**2 / (c - d * (a + b)))))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "1d6ce47f-e8b0-485c-a8d3-ed03869582d9",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a-(b**2/(c-d*(a+b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "488a4b6c-fb71-4a36-a9c0-c34ad730a02f",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    x=a - (b**2 / (c - d * (a + b)))\n    return x\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "dde69028-9d3c-4046-8790-c590127030ee",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "15b2a21e-872e-41b7-9104-5ac9193ba642",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "4b7d373c-f2ee-4424-ac8a-39d3017ad552",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c-d*(a+b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "2fe834d0-da19-4014-bf61-6e972c8d535c",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    result=a-(pow(b,2) / (c - d * (a + b)))\n    return result\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "ca0fee8a-c882-4327-a06b-35a2ea32d64c",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    x = a - (b**2 / (c - d*(a+b)))\n    return x\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "d2d37eac-7d18-44c7-88ac-11230dcea8aa",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a- (b**2 / (c-d *(a+b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "75455270-ff2d-4961-9a4e-eabf6970f20f",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c -d * (a+b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "74650556-b348-4ae1-8434-f7ddd108ba51",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "26fc75b8-8edc-4c03-813c-77d7423b44fc",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return (a - (b**2 / (c - (d * (a + b)))))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "42bcec99-f48f-4a94-981e-eb50dc44f5f8",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    result = a - (b**2 / (c - d * (a + b)))\n    return result\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "2d78a46d-ab3e-4e3b-8b36-6954b51dddab",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "9d5af14b-e004-4651-87f7-921dcac5cc25",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "ddf7b7ed-6b1b-47c5-ae62-4e313176c7cc",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b ** 2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "680d7b5e-a8ac-439f-b55f-f35199aa1067",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a+b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "af5d5f49-125e-4629-baa7-1556293e1556",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "6d968072-c466-461b-86ff-5dd8ae598716",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a-(b**2/(c-d*(a+b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "9ab51dde-074e-4e46-b035-a4e80347a324",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a-(b**2/(c-d*(a+b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "bc0507e9-651a-4166-947d-576eb43e928a",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    res = a - (b*b / (c - d * (a + b)))\n    return res\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "ac8f6fed-0ac3-4933-8f02-65766c13e3b3",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "f72c8e61-6c93-4e12-a248-7bb19d4d8106",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "bee1bdd3-f3b0-46c6-a75f-acef9978f53a",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a-(b**2/(c-d*(a+b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "693e169d-219a-49f4-b153-f217691a4b62",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a-(b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "20d91914-98fc-4814-b65a-d0d9092fb713",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "198ab4a8-622a-4102-b58f-a874dffb1760",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "eebc0a27-3eb3-49f8-82f9-1b14f0f5ad37",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    result = a-(b**2 /(c- d * (a + b)))\n    return result\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "2d23f934-fd56-48bb-b47a-050870b9988d",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c -d*(a+b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "34035832-434b-4f7a-84d3-435f1e0b9833",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return (a - (b**2 / (c - d * (a + b))))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "4a16c24c-63ab-49c6-9688-6cb76d8961f6",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "3ebcbd98-0376-4014-b57e-1686ca9e492c",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "21fd83a5-2fc3-4ec5-a386-8affce93c068",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (pow(b,2) / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "6ab0ff69-a675-4c3d-a5a1-e5f417ddf6cd",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "49244e8e-755f-4a2f-adb4-4053b143f993",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "b01f8ede-5267-4ce5-b5c9-5b4ff7637b60",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a-b**2/(c-d*(a+b))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "43595987-c96c-4710-9401-a6b8606c417c",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "3e08fb66-5ca9-49a1-bb91-7afde6feebb9",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d*(a+b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "08b4393a-7cd9-4985-927e-9061be3b3991",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "54492311-8ce5-4ba9-8d3a-2e5823fd7ef9",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "536f3b38-ab9a-4885-ae26-a81e5a37faeb",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "deb7c046-a720-4714-81ed-04f8854ee423",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    x = a - (b**2 / (c - d * (a + b)))\n    return x\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "ad49270c-d709-4352-9463-de2ba7e064d9",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "3059fb60-e117-4141-8d8f-ccde06d4e140",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "865f6c47-e97c-4718-a7e3-3674e3e7c14d",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "71e4bf13-5240-4940-9146-309a334f25a3",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "a02cfc32-af6f-4298-9832-83c2020e0821",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return (a-(b**2/(c-d*(a+b))))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "f8155e80-e55e-4908-94bf-67e51cef0d1d",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return  a - (b**2/ (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "850f7675-8b06-4368-a253-365575e162fd",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return (a - (b**2 / ( c - d * (a + b))))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "e7fc552e-9c4d-4b85-8865-6687c3dc5c0a",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "3b86954f-5d54-4033-b5b2-9ef3fb95128c",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    result= a-(b**2 /(c-d*(a + b)))\n    return result\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "66db6fc0-b06f-4397-969d-b8deafb58da0",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "8039ce90-3e86-4f41-addc-3d3d099274e6",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    answer = a - ((b**2) / ((c - d * (a+b))))\n    return answer\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "6b8429a9-605d-40b5-9c71-7c90841a7df8",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "c439e0fd-683f-43c8-953d-71b46d316a33",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c-d *(a+b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "6fe669f1-d782-4135-a992-b6be17d4ac05",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "2e245da3-56ba-457f-bd35-6f23c66c8616",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d *(a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "1e7f85eb-ba47-40a5-9c47-71fbe553d479",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "f100c6c1-9ea5-4633-a870-39480f9ccdfc",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "e3cfd81e-8c83-476b-96b3-239adc8f5b45",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return(a - (b**2 / (c - d * (a + b))))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "789f9b26-eebd-46b0-8823-05aa868ae205",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a-(b**2/(c-d*(a+b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "646c7f61-6b45-42a5-98b0-0539259d609e",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "378d7422-b466-49d3-b455-7bc1d654d9d2",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "8c4954a3-74da-4402-aeec-975c502d13ee",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2/(c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "9bc2ac6f-9d3d-4c23-a756-f248485f827b",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    result = a - (b**2 / (c - d * (a + b)))\n    return result\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "c2049649-0b44-40e0-8e47-a671d25277d6",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d* (a +b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "8bb10af3-7d19-4022-b36b-2049e9ae7508",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "a63450c9-f04b-4dff-a18a-a52194775767",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a-(b**2/(c-d*(a+b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "74480aec-3021-4cd7-a9f0-f1c829c638c6",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    result = a - (b*b / (c - d * (a + b)))\n    return result\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "744d4f5b-0a7d-4902-b341-deced7d6e780",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c-d * (a+b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "3d34f42d-65c9-4fb6-9f0c-5aac045ce6c5",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    result = a - (b**2 / ( c -d * (a + b)))\n    return result\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "9214c6c9-a222-48d5-baeb-1d0f6159b394",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "5d64af2f-fca7-43b9-8645-764606a9b75e",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d*(a+b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "8f9acfcf-0469-4af5-882d-e4ea49d59afe",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return (a-(b**2/(c-d*(a+b))))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "dbf5c00f-f521-4391-8a17-30da1473ff32",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2/ (c - (d * (a + b))))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "0d4004ee-382f-4b74-b773-cb58b4e529d2",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d*(a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "8155bd8f-1288-43c6-92d8-baad8ab8d931",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "f8cc68f1-ea9b-430f-a94e-9ef07178e716",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    answer = a-(b**2 / (c - d * (a+b)))\n    return answer\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "e80fc7f5-6de0-4fe5-8c0b-2e4b8efb0494",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "de37d956-b3e9-4f63-8528-048f223d25e8",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "0c73e3cd-b276-4a71-baae-ca439cb5facb",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 /(c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "d3db5cb8-9d58-4061-9aaf-6f459415b98e",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "4ef38f56-9050-417a-af65-becb1e4d6cf1",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "b0b102e0-b0b3-4571-bb50-c144c949f6d2",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "4272d38a-783b-472e-9e98-c39acc87f0f8",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    term = a - (b**2 / (c - d * (a + b)))\n    return term\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "3442f77c-3b16-4279-8cc9-7c7d2549e2b2",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a-(b**2/(c-d*(a+b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "d4988063-1c03-4ae2-b2c2-525f932eabde",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    smooth_operator= a - (b**2 / (c - d * (a + b)))\n    return smooth_operator\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "8bdfaed6-4b32-4955-900c-a0c41f9216ee",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return (a-b**2/(c-d*(a+b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "4bb71fa6-8210-4cf3-a258-5080cd0490d8",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "694da0a8-b348-4e04-8042-e3546a47d28f",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2/(c-d*(a+b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "f8cc8528-904c-49f6-bd55-0c13170e612b",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "2c25bcc6-5f8f-4074-aeeb-f74a5206d555",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a+b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "a0e10c57-7f99-4a58-85b8-fe7cfe54e8bf",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "bc03bc4e-f293-45f8-821b-fdde20c8ad0d",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a=1, b=2, c=3, d=4):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "a6b2128e-92dc-4516-802d-2c1f38cce95b",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "ce13d892-e7b3-4a9e-ac8b-f4b4b9b91590",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a+b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "836c6284-556e-44aa-8768-54b78e327d75",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return (a - (b**2/(c-d*(a+b))))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "ef8e4926-cf4e-423f-beeb-b7a3b91f6996",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - ((b**2) / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "7d2b95a4-89ce-466a-84bb-968f8dfd9361",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a-(b**2 /(c-d*(a+b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "e1ab96d6-cbbc-43b3-9e7f-c898eebca002",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2/(c - d*(a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "949ecc41-3396-4e33-82ab-4f5fd504fd8a",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c-d*(a+b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "b524f099-8549-4126-b383-f5ff7c495468",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "3133a12e-0b46-4395-9653-36ca52780bc0",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c -d * (a+b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "db3809f2-2817-4b52-8677-f6531463c8dc",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "769d964b-7ffc-48c5-9eb0-0c979cafb0b6",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    ans = a - (b**2 / (c - d * (a + b)))\n    return ans\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "84165324-c3aa-479c-873f-0ffa29e67b9b",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "f15928b6-491d-47f3-839d-33e8cb302fb4",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    result = a - (b**2 / (c - d * (a + b)))\n    return result\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "acd876b4-f1ea-408b-bf4f-8e20d481cc94",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "f2aeac2d-3567-45df-943d-9609ac80be0d",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "33a814ca-49c0-42ae-83bc-d27a0080a85b",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "15dc6cfc-c355-40f4-abc0-3414d24d4226",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "adf5839a-919f-4ed8-9b7d-086359a68b02",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n     return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "98a3127c-18ab-4aa9-9fd0-678eb675f0dc",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return float(a - (b**2 / (c - d * (a+b))))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "08757a74-1f8e-4f25-8b93-e650ddc19337",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "c469d434-87f2-4010-94f1-8c1115e03aae",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "2895f50f-1bf5-4279-a44d-d48eb04c903d",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "5b40b2ff-b6d5-4415-a062-85df6788bc4e",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - ((b**2) / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "b6e50ded-832f-4750-a941-20448d22037e",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "24432797-a91f-42b2-ad19-3c280f46850c",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return (a-(b**2 / (c-d*(a+b))))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "7e07a091-58cb-477f-ab8d-13a823db61b1",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return (a-(b**2 / (c-d * (a+b))))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "a7fc5900-30bc-4a9b-a200-0ffce18e2b45",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b ** 2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "ae1b1411-d2fd-450c-a957-bcf9dd1afe51",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "349d4a0b-d5eb-4c7e-83cf-3cc79d3865a0",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "0d8374fb-b2a9-44b2-b7f0-0e7498defc3a",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a -(b**2/(c-d*(a+b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "b64be390-4f79-425b-abfe-83e0c337cdcd",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "9587553b-991f-4d6e-9403-acb7b8b7f30b",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c-d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "d671aa58-333f-4cc5-a8f3-198b93f67a51",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "488b6963-aa6e-47c4-9464-a949020033a7",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "f0a9ecb6-43b6-4410-a176-9c9ffae90175",
+    "submission": {
+      "points": 1.0,
+      "content": "import math\ndef calculate(a, b, c, d):\n    return a - (pow(b,2) / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "048975a8-0661-4613-9bbf-33339025030f",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - ((b**2) / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "3adeba84-ed3d-45d5-ad6b-bb79ed77ea39",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    x = a - (b**2 / (c - d * (a + b)))\n    return x\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "2c5c760e-4729-4bd5-823a-b27c92e2e010",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2/(c - d*(a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "b7ebf45a-a8f3-4de8-9660-dca37cd5bf6d",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "1946f6d6-f00d-4aff-bbb3-6660fa6e4d72",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d* (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "81e7dee5-3df2-4f33-8af5-99a1c6571f30",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "613d1e89-dd10-4f81-b78f-a27a220b2003",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "2d6bad36-bc71-47ca-8309-5f769b77c297",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "ff604c6d-20bd-452f-981e-f07d395f2c4f",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "579ca978-3f21-47c9-8ea2-cbf0af05ec91",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "342dc37b-7049-4843-8b33-12a6e889db92",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return (a - (b**2 / (c-d * (a+b))))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "6e719eae-f298-4f7f-a434-2d18339d6e61",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "af4ae8d1-ea62-4e81-b015-73bf346487f4",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a-(b**2/(c-d*(a+b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "5b0c5636-52f6-4ed4-9137-1240d9c3aaf8",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "b732b8fc-bc35-49df-abb0-2b3bb005e0a4",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c -d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "87cf0cb3-05fb-46f7-8ea5-2345751ba479",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a-(b**2/(c-(d*(a+b))))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "46340115-434f-4a32-a766-2114250b9aea",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c-d * (a+b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  },
+  {
+    "userId": "76961922-1cb2-4d0f-b59a-aa4e85c49ff7",
+    "submission": {
+      "points": 1.0,
+      "content": "def calculate(a, b, c, d):\n    return a - (b**2 / (c - d * (a + b)))\nprint(calculate(1, 2, 3, 4))"
+    }
+  }
+]
