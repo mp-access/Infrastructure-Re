@@ -1,7 +1,3 @@
-# setup 1: [master]  users > admin > role mapping > assign role > filter by clients > add `manage-realm`, `manage-clients`, `manage-users` from the `master-realm`
-    # required for full programmatic admin control over realms.
-# setup 2: [access] clients > BACKEND_CLIENT_ID > roles > create role > set COURSE_SLUG as role name, that's it.
-
 import requests
 import json
 from config import (
@@ -11,8 +7,8 @@ from config import (
 )
 from keycloak_utils import (
     get_keycloak_admin_token, get_user_token, create_keycloak_user,
-    get_keycloak_user_id, get_client_uuid, get_client_role_representation,
-    assign_client_role_to_user
+    get_keycloak_user_id, get_client_uuid, create_or_get_client_role,
+    assign_client_role_to_user, assign_master_realm_admin_roles
 )
 
 def register_students_workflow():
@@ -21,18 +17,19 @@ def register_students_workflow():
         admin_token = get_keycloak_admin_token()
         print(f"Obtained Keycloak Admin Token: {admin_token[:100]}...")
 
+        assign_master_realm_admin_roles(admin_token)
+
         supervisor_token = get_user_token(SUPERVISOR_USERNAME, SUPERVISOR_PASSWORD, BACKEND_CLIENT_ID)
         print(f"Obtained Supervisor Token: {supervisor_token[:100]}...")
 
         backend_client_uuid = get_client_uuid(admin_token, BACKEND_CLIENT_ID)
         print(f"Backend client UUID: {backend_client_uuid}")
 
-        course_role_representation = get_client_role_representation(admin_token, backend_client_uuid, COURSE_SLUG)
+        course_role_representation = create_or_get_client_role(admin_token, backend_client_uuid, COURSE_SLUG)
         print(f"Obtained client role representation for '{COURSE_SLUG}'.")
 
-        # 2. Create Students in Keycloak and assign roles
-        student_registration_ids = []  # Will hold usernames for backend registration
-        student_credentials = []  # Stores username and password to get individual tokens later
+        student_registration_ids = []
+        student_credentials = []
 
         print(f"\n--- Creating {NUM_STUDENTS_TO_CREATE} Students in Keycloak ---")
         for i in range(NUM_STUDENTS_TO_CREATE):
@@ -48,12 +45,11 @@ def register_students_workflow():
             student_credentials.append({"username": username, "password": password})
             student_registration_ids.append(username)
 
-        # save student credentials to a file for the submission script
         with open(STUDENT_CREDENTIALS_FILE, 'w') as f:
             json.dump(student_credentials, f, indent=4)
         print(f"\nSaved student credentials to {STUDENT_CREDENTIALS_FILE}")
 
-        # add Students to Course via Backend Endpoint (using supervisor token)
+        # add students to course via the backend endpoint (required such that the participant count is shown correctly)
         register_participants_url = f"{BACKEND_URL}/courses/{COURSE_SLUG}/participants"
         payload_registration_ids = student_registration_ids
         headers = {
@@ -75,6 +71,3 @@ def register_students_workflow():
         print(f"\n!!! An unexpected error occurred: {e}")
 
     print("\n--- User Registration and Course Enrollment Complete ---")
-
-if __name__ == "__main__":
-    register_students_workflow()

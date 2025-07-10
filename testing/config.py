@@ -18,13 +18,13 @@ API_KEY = "1234"
 
 # --- Test Data Parameters ---
 SUPERVISOR_USERNAME = "supervisor@uzh.ch"
-SUPERVISOR_PASSWORD = "supervisor"
+SUPERVISOR_PASSWORD = "supervisor" # change if necessary
 
-COURSE_SLUG = "access-mock-course"
-EXAMPLE_SLUG = "pass-by-reference"
-TASK_FILE_ID = 55
+COURSE_SLUG = "access-mock-course" # change if necessary
+EXAMPLE_SLUG = "power-function" # change if necessary
+TASK_FILE_ID = 51 # look this up in the database
 
-NUM_STUDENTS_TO_CREATE = 2
+NUM_STUDENTS_TO_CREATE = 15 # change if necessary
 STUDENT_BASE_PASSWORD = "student"
 
 # --- File Paths ---

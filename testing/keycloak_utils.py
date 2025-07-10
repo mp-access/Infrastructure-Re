@@ -3,7 +3,7 @@
 import requests
 import json
 from config import (
-    KEYCLOAK_HOST, KEYCLOAK_REALM, KEYCLOAK_ADMIN_CLI_CLIENT_ID,
+    KEYCLOAK_HOST, KEYCLOAK_ADMIN_CLI_CLIENT_ID,
     KEYCLOAK_ADMIN_USERNAME, KEYCLOAK_ADMIN_PASSWORD,
     KEYCLOAK_TOKEN_ENDPOINT, KEYCLOAK_ADMIN_TOKEN_ENDPOINT,
     KEYCLOAK_USERS_API, KEYCLOAK_CLIENTS_API
@@ -100,6 +100,29 @@ def get_client_role_representation(admin_token, client_uuid, role_name):
     response.raise_for_status()
     return response.json()
 
+def create_or_get_client_role(admin_token, client_uuid, role_name):
+    headers = {
+        "Content-Type": "application/json",
+        "Authorization": f"Bearer {admin_token}"
+    }
+    role_data = {"name": role_name}
+    role_url = f"{KEYCLOAK_CLIENTS_API}/{client_uuid}/roles"
+
+    print(f"Attempting to create client role '{role_name}' for client UUID '{client_uuid}'...")
+    response = requests.post(role_url, data=json.dumps(role_data), headers=headers)
+
+    try:
+        response.raise_for_status()
+        print(f"Successfully created client role: {role_name}")
+        # after creation, we need to get its full representation for assignment
+        return get_client_role_representation(admin_token, client_uuid, role_name)
+    except requests.exceptions.HTTPError as e:
+        if e.response.status_code == 409:
+            print(f"Client role '{role_name}' already exists. Fetching existing role representation.")
+            return get_client_role_representation(admin_token, client_uuid, role_name)
+        else:
+            raise e
+
 def assign_client_role_to_user(admin_token, user_uuid, client_uuid, role_representation):
     headers = {
         "Content-Type": "application/json",
@@ -110,3 +133,77 @@ def assign_client_role_to_user(admin_token, user_uuid, client_uuid, role_represe
                              data=json.dumps([role_representation]), headers=headers)
     response.raise_for_status()
     print(f"Successfully assigned role.")
+
+
+def get_master_realm_user_id(admin_token, username="admin"):
+    headers = {"Authorization": f"Bearer {admin_token}"}
+    print(f"Fetching user ID for '{username}' in master realm...")
+    response = requests.get(f"{KEYCLOAK_HOST}/admin/realms/master/users?username={username}", headers=headers)
+    response.raise_for_status()
+    users = response.json()
+    if not users:
+        raise Exception(f"User '{username}' not found in master realm.")
+    return users[0]['id']
+
+
+def get_realm_management_client_uuid(admin_token, client_id="master-realm"):
+    headers = {"Authorization": f"Bearer {admin_token}"}
+    print(f"Fetching UUID for client '{client_id}' in master realm...")
+    response = requests.get(f"{KEYCLOAK_HOST}/admin/realms/master/clients?clientId={client_id}", headers=headers)
+    response.raise_for_status()
+    clients = response.json()
+    if not clients:
+        raise Exception(f"Client '{client_id}' not found in master realm.")
+    return clients[0]['id']
+
+
+def get_realm_management_client_role_representation(admin_token, client_uuid, role_name):
+    headers = {"Authorization": f"Bearer {admin_token}"}
+    response = requests.get(f"{KEYCLOAK_HOST}/admin/realms/master/clients/{client_uuid}/roles/{role_name}",
+                            headers=headers)
+    response.raise_for_status()
+    return response.json()
+
+
+def assign_master_realm_admin_roles(admin_token):
+    """
+    Assigns manage-realm, manage-clients, manage-users roles to the 'admin' user (necessary rights to create users, roles, etc.).
+    """
+    admin_user_id = get_master_realm_user_id(admin_token)
+    realm_management_client_uuid = get_realm_management_client_uuid(admin_token)
+
+    roles_to_assign_names = ["manage-realm", "manage-clients", "manage-users"]
+    role_representations = []
+
+    for role_name in roles_to_assign_names:
+        try:
+            role_representation = get_realm_management_client_role_representation(admin_token,
+                                                                                  realm_management_client_uuid,
+                                                                                  role_name)
+            role_representations.append(role_representation)
+        except requests.exceptions.HTTPError as e:
+            if e.response.status_code == 404:
+                print(
+                    f"Warning: Role '{role_name}' not found for 'realm-management' client. Ensure roles exist in Keycloak.")
+            else:
+                raise e
+
+    if not role_representations:
+        print("No roles found to assign or an error occurred. Skipping role assignment for 'admin' user.")
+        return
+
+    headers = {
+        "Content-Type": "application/json",
+        "Authorization": f"Bearer {admin_token}"
+    }
+    assign_url = f"{KEYCLOAK_HOST}/admin/realms/master/users/{admin_user_id}/role-mappings/clients/{realm_management_client_uuid}"
+
+    print(f"Attempting to assign roles {roles_to_assign_names} to 'admin' user...")
+    response = requests.post(assign_url, data=json.dumps(role_representations), headers=headers)
+
+    try:
+        response.raise_for_status()  # Keycloak returns 204 No Content on success, even if roles are already assigned
+        print(f"Successfully assigned roles {roles_to_assign_names} to 'admin' user.")
+    except requests.exceptions.HTTPError as e:
+        print(f"Failed to assign roles: {e.response.status_code} - {e.response.text}")
+        raise e
