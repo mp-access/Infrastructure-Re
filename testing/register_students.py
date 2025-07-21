@@ -71,3 +71,6 @@ def register_students_workflow():
         print(f"\n!!! An unexpected error occurred: {e}")
 
     print("\n--- User Registration and Course Enrollment Complete ---")
+
+if __name__ == "__main__":
+    register_students_workflow()

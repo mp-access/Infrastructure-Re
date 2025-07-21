@@ -26,6 +26,8 @@ TASK_FILE_ID = 51 # look this up in the database
 
 NUM_STUDENTS_TO_CREATE = 15 # change if necessary
 STUDENT_BASE_PASSWORD = "student"
+SUBMISSION_MODE = "parallel"
+MAX_PARALLEL_SUBMISSIONS = 10
 
 # --- File Paths ---
 STUDENT_CREDENTIALS_FILE = "student_credentials.json"

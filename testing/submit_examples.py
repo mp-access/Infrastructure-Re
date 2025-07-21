@@ -1,15 +1,55 @@
 import requests
 import json
 import os
-import random
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
 from config import (
     BACKEND_URL, BACKEND_CLIENT_ID, COURSE_SLUG, EXAMPLE_SLUG,
-    API_KEY, STUDENT_CREDENTIALS_FILE, FIRST_SUBMISSIONS_FILE, TASK_FILE_ID
+    API_KEY, STUDENT_CREDENTIALS_FILE, FIRST_SUBMISSIONS_FILE, TASK_FILE_ID,
+    SUBMISSION_MODE, MAX_PARALLEL_SUBMISSIONS
 )
-from keycloak_utils import get_user_token, get_keycloak_admin_token
+from keycloak_utils import get_user_token # Assuming this function is blocking
 
-def submit_solutions_workflow():
+def submit_example(student_info, submission_code_content, submission_url_template, api_key, backend_client_id):
+    student_username = student_info["username"]
+    student_password = student_info["password"]
+
+    try:
+        student_token = get_user_token(student_username, student_password, backend_client_id)
+
+        submission_dto = {
+            "restricted": True,
+            "userId": student_username,
+            "command": "GRADE",
+            "files": [
+                {
+                    "taskFileId": TASK_FILE_ID,
+                    "content": submission_code_content
+                }
+            ]
+        }
+        headers = {
+            "Content-Type": "application/json",
+            "Authorization": f"Bearer {student_token}",
+            "X-API-Key": api_key
+        }
+
+        print(f"Submitting solution for '{student_username}'...")
+        response = requests.post(submission_url_template, data=json.dumps(submission_dto), headers=headers)
+        response.raise_for_status()
+        print(f"Submission for '{student_username}' successful! Status: {response.status_code}")
+    except requests.exceptions.HTTPError as e:
+        print(f"Submission for '{student_username}' FAILED: {e.response.status_code} - {e.response.text}")
+    except requests.exceptions.RequestException as e:
+        print(f"An HTTP request error occurred for '{student_username}': {e}")
+    except Exception as e:
+        print(f"An unexpected error occurred during submission for '{student_username}': {e}")
+
+def submit_solutions_workflow(mode="parallel", max_parallel_workers=10):
+
+    if not mode in ("consecutive", "parallel"):
+        raise ValueError("Invalid mode supplied. Must be 'parallel' or 'consecutive'")
+
     print("--- Starting Solution Submission ---")
     try:
         if not os.path.exists(STUDENT_CREDENTIALS_FILE):
@@ -38,52 +78,42 @@ def submit_solutions_workflow():
 
         submission_url_template = f"{BACKEND_URL}/courses/{COURSE_SLUG}/examples/{EXAMPLE_SLUG}/submit"
 
-        print(f"\n--- Processing Submissions for Each Student to Example '{EXAMPLE_SLUG}' ---")
-        for i, student_info in enumerate(student_credentials):
-            student_username = student_info["username"]
-            student_password = student_info["password"]
+        print(f"\n--- Processing Submissions for Each Student to Example '{EXAMPLE_SLUG}' ({mode.upper()} mode) ---")
 
-            current_submission_content_entry = submission_contents_data[i]
-            submission_code_content = current_submission_content_entry["submission"]["content"]
+        if mode == "consecutive":
+            for i, student_info in enumerate(student_credentials):
+                current_submission_content_entry = submission_contents_data[i]
+                submission_code_content = current_submission_content_entry["submission"]["content"]
+                submit_example(student_info, submission_code_content, submission_url_template, API_KEY, BACKEND_CLIENT_ID)
+                print(f"Processed {i + 1}/{len(student_credentials)} submissions.")
+        elif mode == "parallel":
+            with ThreadPoolExecutor(max_workers=max_parallel_workers) as executor:
+                future_per_student = {
+                    executor.submit(
+                        submit_example,
+                        student_credentials[i],
+                        submission_contents_data[i]["submission"]["content"],
+                        submission_url_template,
+                        API_KEY,
+                        BACKEND_CLIENT_ID
+                    ): student_credentials[i]["username"]
+                    for i in range(len(student_credentials))
+                }
 
-            student_token = get_user_token(student_username, student_password, BACKEND_CLIENT_ID)
-            print(f"Obtained token for {student_username}")
+                for i, future in enumerate(as_completed(future_per_student)):
+                    student_username = future_per_student[future]
+                    try:
+                        future.result()
+                    except Exception as exc:
+                        print(f"'{student_username}' generated an exception: {exc}")
+                    print(f"Completed {i + 1}/{len(student_credentials)} parallel submissions.")
 
-            submission_dto = {
-                "restricted": True,
-                "userId": student_username,
-                "command": "GRADE",
-                "files": [
-                    {
-                        "taskFileId": TASK_FILE_ID,
-                        "content": submission_code_content
-                    }
-                ]
-            }
-            headers = {
-                "Content-Type": "application/json",
-                "Authorization": f"Bearer {student_token}",
-                "X-API-Key": API_KEY
-            }
-
-            print(f"Submitting solution for '{student_username}' (Entry {i + 1})...")
-            response = requests.post(submission_url_template, data=json.dumps(submission_dto), headers=headers)
-            try:
-                response.raise_for_status()  # Check for HTTP errors
-                print(f"Submission for '{student_username}' successful! Status: {response.status_code}")
-            except requests.exceptions.HTTPError as e:
-                print(f"Submission for '{student_username}' FAILED: {e.response.status_code} - {e.response.text}")
-            except Exception as e:
-                print(f"An error occurred during submission for '{student_username}': {e}")
-
-    except requests.exceptions.RequestException as e:
-        print(f"\nAn HTTP request error occurred: {e}")
-        if e.response is not None:
-            print(f"Response status: {e.response.status_code}")
-            print(f"Response body: {e.response.text}")
     except FileNotFoundError as e:
         print(f"\nError: {e}")
     except Exception as e:
         print(f"\nAn unexpected error occurred: {e}")
 
     print("\n--- Solution Submission Complete ---")
+
+if __name__ == "__main__":
+    submit_solutions_workflow(mode=SUBMISSION_MODE, max_parallel_workers=MAX_PARALLEL_SUBMISSIONS)
