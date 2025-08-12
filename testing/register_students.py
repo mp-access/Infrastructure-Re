@@ -25,7 +25,7 @@ def register_students_workflow():
         backend_client_uuid = get_client_uuid(admin_token, BACKEND_CLIENT_ID)
         print(f"Backend client UUID: {backend_client_uuid}")
 
-        course_role_representation = create_or_get_client_role(admin_token, backend_client_uuid, COURSE_SLUG)
+        course_role_representation = create_or_get_client_role(admin_token, backend_client_uuid, f"{COURSE_SLUG}-student")
         print(f"Obtained client role representation for '{COURSE_SLUG}'.")
 
         student_registration_ids = []
@@ -54,7 +54,6 @@ def register_students_workflow():
         payload_registration_ids = student_registration_ids
         headers = {
             "Content-Type": "application/json",
-            "Authorization": f"Bearer {supervisor_token}",
             "X-API-Key": API_KEY
         }
         print(f"\n--- Registering {len(payload_registration_ids)} Participants to Course '{COURSE_SLUG}' ---")
