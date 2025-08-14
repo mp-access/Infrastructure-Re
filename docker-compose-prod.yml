@@ -81,6 +81,7 @@ services:
       KEYCLOAK_ADMIN: ${KEYCLOAK_ADMIN}
       KEYCLOAK_ADMIN_PASSWORD: ${KEYCLOAK_ADMIN_PASSWORD}
       AUTH_SERVER_URL: ${AUTH_SERVER_URL}
+      CLUSTER_URL: ${CLUSTER_URL}
       DOCKER_HOST: tcp://docker:2376
       DOCKER_TLS_VERIFY: 'true'
       DOCKER_CERT_PATH: /tls/client
@@ -113,6 +114,15 @@ services:
              certonly -v --standalone
              --email ${LETSENCRYPT_EMAIL} -d ${DOMAIN} --agree-tos
              --non-interactive
+
+  llm-service:
+    container_name: llm-service
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - "${LLM_MICROSERVICE_PORT}:${LLM_MICROSERVICE_PORT}"
 
 volumes:
   courses:
