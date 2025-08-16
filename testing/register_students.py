@@ -61,6 +61,19 @@ def register_students_workflow():
         response.raise_for_status()
         print(f"Participants registered successfully! Status: {response.status_code}")
 
+        # register supervisor
+        register_supervisors_url = f"{BACKEND_URL}/courses/{COURSE_SLUG}/supervisors"
+        post_body = ["supervisor@uzh.ch"]
+        headers = {
+            "Content-Type": "application/json",
+            "Authorization": f"Bearer {supervisor_token}",
+            "X-API-Key": API_KEY
+        }
+        print(f"\n--- Registering {len(post_body)} supervisor to Course '{COURSE_SLUG}' ---")
+        response = requests.post(register_supervisors_url, data=json.dumps(post_body), headers=headers)
+        response.raise_for_status()
+        print(f"Supervisor registered successfully! Status: {response.status_code}")
+
     except requests.exceptions.RequestException as e:
         print(f"\n!!! An HTTP request error occurred: {e}")
         if e.response is not None:

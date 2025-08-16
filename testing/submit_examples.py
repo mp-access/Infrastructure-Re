@@ -1,3 +1,5 @@
+from datetime import datetime
+
 import requests
 import json
 import os
@@ -30,11 +32,11 @@ def submit_example(student_info, submission_code_content, submission_url_templat
         }
         headers = {
             "Content-Type": "application/json",
-            "Authorization": f"Bearer {student_token}",
-            "X-API-Key": api_key
+            "Authorization": f"Bearer {student_token}"
+            # "X-API-Key": api_key
         }
 
-        print(f"Submitting solution for '{student_username}'...")
+        print(f"Submitting solution for '{student_username}' at time {datetime.now()}")
         response = requests.post(submission_url_template, data=json.dumps(submission_dto), headers=headers)
         response.raise_for_status()
         print(f"Submission for '{student_username}' successful! Status: {response.status_code}")
@@ -94,7 +96,7 @@ def submit_solutions_workflow(mode="parallel", max_parallel_workers=10):
                         student_credentials[i],
                         submission_contents_data[i]["submission"]["content"],
                         submission_url_template,
-                        API_KEY,
+                        # API_KEY,
                         BACKEND_CLIENT_ID
                     ): student_credentials[i]["username"]
                     for i in range(len(student_credentials))
