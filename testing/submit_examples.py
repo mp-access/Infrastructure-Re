@@ -12,7 +12,7 @@ from config import (
 )
 from keycloak_utils import get_user_token # Assuming this function is blocking
 
-def submit_example(student_info, submission_code_content, submission_url_template, api_key, backend_client_id):
+def submit_example(student_info, submission_code_content, submission_url_template, backend_client_id):
     student_username = student_info["username"]
     student_password = student_info["password"]
 
@@ -86,7 +86,7 @@ def submit_solutions_workflow(mode="parallel", max_parallel_workers=10):
             for i, student_info in enumerate(student_credentials):
                 current_submission_content_entry = submission_contents_data[i]
                 submission_code_content = current_submission_content_entry["submission"]["content"]
-                submit_example(student_info, submission_code_content, submission_url_template, API_KEY, BACKEND_CLIENT_ID)
+                submit_example(student_info, submission_code_content, submission_url_template, BACKEND_CLIENT_ID)
                 print(f"Processed {i + 1}/{len(student_credentials)} submissions.")
         elif mode == "parallel":
             with ThreadPoolExecutor(max_workers=max_parallel_workers) as executor:
@@ -96,7 +96,6 @@ def submit_solutions_workflow(mode="parallel", max_parallel_workers=10):
                         student_credentials[i],
                         submission_contents_data[i]["submission"]["content"],
                         submission_url_template,
-                        # API_KEY,
                         BACKEND_CLIENT_ID
                     ): student_credentials[i]["username"]
                     for i in range(len(student_credentials))
