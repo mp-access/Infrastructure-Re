@@ -20,18 +20,18 @@ def load_model_and_tokenizer():
         tokenizer = AutoTokenizer.from_pretrained(model_link, trust_remote_code=True)
         model = AutoModel.from_pretrained(model_link, trust_remote_code=True)
 
-        device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+        # device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+        device = "cpu"
         model.to(device)
 
-        if (torch.device == "cpu"):
-            torch.backends.quantized.engine = "qnnpack" # "fbgemm" for x86 (Intel/AMD CPUs), "qnnpack" for ARM/Apple M-Chips
-            model_quantized = torch.quantization.quantize_dynamic(
-                model,
-                {torch.nn.Linear},
-                dtype=torch.qint8
-            )
-            model = model_quantized
-            logger.info("Model quantized successfully.")
+        torch.backends.quantized.engine = "qnnpack" # "fbgemm" for x86 (Intel/AMD CPUs), "qnnpack" for ARM/Apple M-Chips
+        model_quantized = torch.quantization.quantize_dynamic(
+            model,
+            {torch.nn.Linear},
+            dtype=torch.qint8
+        )
+        model = model_quantized
+        logger.info("Model quantized successfully.")
 
         model.eval()
         logger.info(f"Model loaded successfully on device: {device}")
