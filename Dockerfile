@@ -17,6 +17,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY ./llm-microservice/ .
 
+RUN python3 export_to_onnx.py && rm graphcodebert_embedder.onnx
+
 # should be the same as LLM_MICROSERVICE_PORT in .env
 EXPOSE 4000
 

@@ -29,7 +29,7 @@ class Implementation(BaseModel): # expected structure of the JSON payload that t
 
 @app.post("/get_embedding/")
 async def get_embedding(implementation: Implementation):
-    if llm.model is None or llm.tokenizer is None:
+    if llm.onnx_session is None or llm.tokenizer is None:
         raise HTTPException(status_code=503, detail="LLM model is not loaded or ready.")
 
     try:
@@ -41,7 +41,7 @@ async def get_embedding(implementation: Implementation):
 
 @app.get("/health/")
 async def health_check():
-    model_loaded = llm.model is not None and llm.tokenizer is not None
+    model_loaded = llm.onnx_session is not None and llm.tokenizer is not None
     return JSONResponse(
         content={"status": "running", "model_loaded": model_loaded},
         media_type="application/json"
