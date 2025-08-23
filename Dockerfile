@@ -15,11 +15,10 @@ WORKDIR /app
 COPY ./llm-microservice/requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY ./llm-microservice/llm.py .
-COPY ./llm-microservice/api.py .
+COPY ./llm-microservice/ .
 
 # should be the same as LLM_MICROSERVICE_PORT in .env
-EXPOSE 4000  
+EXPOSE 4000
 
 # port should be the same as LLM_MICROSERVICE_PORT in .env
 CMD ["uvicorn", "api:app", "--host", "0.0.0.0", "--port", "4000"]
