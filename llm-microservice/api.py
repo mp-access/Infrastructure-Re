@@ -1,5 +1,12 @@
 # api.py
+import logging
+
+# Basic logging configuration
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+
 from fastapi import FastAPI, HTTPException
+from fastapi.responses import JSONResponse
 from pydantic import BaseModel
 from contextlib import asynccontextmanager
 import llm
@@ -9,11 +16,11 @@ import llm
 async def lifespan(app: FastAPI):
     try:
         llm.load_model_and_tokenizer()
-        print("LLM model loaded successfully.")
+        logger.info("LLM model loaded successfully.")
     except Exception as e:
         raise RuntimeError(f"Failed to load LLM model at startup: {e}")
     yield
-    print("Shutting down application: No specific cleanup needed for LLM.")
+    logger.info("Shutting down application: No specific cleanup needed for LLM.")
 
 app = FastAPI(lifespan=lifespan)
 
@@ -32,8 +39,10 @@ async def get_embedding(implementation: Implementation):
         print(f"Error during embedding calculation: {e}")
         raise HTTPException(status_code=500, detail=f"Failed to calculate embedding: {e}")
 
-
 @app.get("/health/")
 async def health_check():
     model_loaded = llm.model is not None and llm.tokenizer is not None
-    return {"status": "healthy", "model_loaded": model_loaded}
+    return JSONResponse(
+        content={"status": "running", "model_loaded": model_loaded},
+        media_type="application/json"
+    )
