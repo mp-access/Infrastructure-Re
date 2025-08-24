@@ -41,3 +41,27 @@ def calculate_code_embedding(code: str) -> list:
     logger.info(f"ONNX Inference time: {elapsed:.2f} ms")
 
     return embedding.tolist()
+
+def calculate_code_embeddings(code_snippets: list[str]) -> list[list]:
+    global tokenizer, onnx_session
+
+    if onnx_session is None or tokenizer is None:
+        raise RuntimeError("Model and tokenizer not loaded. Call load_model_and_tokenizer() first.")
+
+    start_time = time.time()
+
+    # Tokenize the entire batch at once
+    inputs = tokenizer(code_snippets, return_tensors="np", padding=True, truncation=True)
+
+    ort_inputs = {
+        "input_ids": inputs["input_ids"],
+        "attention_mask": inputs["attention_mask"]
+    }
+
+    ort_outs = onnx_session.run(None, ort_inputs)
+
+    embeddings = ort_outs[0].tolist()
+
+    elapsed = (time.time() - start_time) * 1000
+    logger.info(f"ONNX Batch Inference time: {elapsed:.2f} ms for {len(code_snippets)} codes")
+    return embeddings

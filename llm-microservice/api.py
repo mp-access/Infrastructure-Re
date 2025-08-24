@@ -11,6 +11,8 @@ from pydantic import BaseModel
 from contextlib import asynccontextmanager
 import llm
 
+from typing import List, Dict, Any
+
 # Define an async context manager for application lifecycle events
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -27,6 +29,14 @@ app = FastAPI(lifespan=lifespan)
 class Implementation(BaseModel): # expected structure of the JSON payload that the backend will send to /get_embedding/
     codeSnippet: str
 
+class BatchRequestItem(BaseModel):
+    submissionId: int
+    codeSnippet: str
+
+class BatchResponseItem(BaseModel):
+    submissionId: int
+    embedding: List[float]
+
 @app.post("/get_embedding/")
 async def get_embedding(implementation: Implementation):
     if llm.onnx_session is None or llm.tokenizer is None:
@@ -38,6 +48,30 @@ async def get_embedding(implementation: Implementation):
     except Exception as e:
         print(f"Error during embedding calculation: {e}")
         raise HTTPException(status_code=500, detail=f"Failed to calculate embedding: {e}")
+
+@app.post("/get_embeddings/", response_model=List[BatchResponseItem])
+async def get_embeddings(submissions: List[BatchRequestItem]):
+    if llm.onnx_session is None or llm.tokenizer is None:
+        raise HTTPException(status_code=503, detail="LLM model is not loaded or ready.")
+
+    submission_ids = [sub.submissionId for sub in submissions]
+    code_snippets = [sub.codeSnippet for sub in submissions]
+
+    try:
+        embeddings = llm.calculate_code_embeddings(code_snippets)
+
+        response_data = []
+        for i, embedding in enumerate(embeddings):
+            response_data.append({
+                "submissionId": submission_ids[i],
+                "embedding": embedding
+            })
+
+        return response_data
+
+    except Exception as e:
+        logger.error(f"Error during batch embedding calculation: {e}")
+        raise HTTPException(status_code=500, detail=f"Failed to calculate batch embeddings: {e}")
 
 @app.get("/health/")
 async def health_check():
