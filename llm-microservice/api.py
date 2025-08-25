@@ -11,9 +11,9 @@ from pydantic import BaseModel
 from contextlib import asynccontextmanager
 import llm
 
-from typing import List, Dict, Any
+from typing import List
 
-# Define an async context manager for application lifecycle events
+# define an async context manager for application lifecycle events
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     try:
@@ -26,9 +26,6 @@ async def lifespan(app: FastAPI):
 
 app = FastAPI(lifespan=lifespan)
 
-class Implementation(BaseModel): # expected structure of the JSON payload that the backend will send to /get_embedding/
-    codeSnippet: str
-
 class BatchRequestItem(BaseModel):
     submissionId: int
     codeSnippet: str
@@ -37,19 +34,7 @@ class BatchResponseItem(BaseModel):
     submissionId: int
     embedding: List[float]
 
-@app.post("/get_embedding/")
-async def get_embedding(implementation: Implementation):
-    if llm.onnx_session is None or llm.tokenizer is None:
-        raise HTTPException(status_code=503, detail="LLM model is not loaded or ready.")
-
-    try:
-        code_embedding = llm.calculate_code_embedding(implementation.codeSnippet)
-        return {"embedding": code_embedding}
-    except Exception as e:
-        print(f"Error during embedding calculation: {e}")
-        raise HTTPException(status_code=500, detail=f"Failed to calculate embedding: {e}")
-
-@app.post("/get_embeddings/", response_model=List[BatchResponseItem])
+@app.post("/calculate_embeddings/", response_model=List[BatchResponseItem])
 async def get_embeddings(submissions: List[BatchRequestItem]):
     if llm.onnx_session is None or llm.tokenizer is None:
         raise HTTPException(status_code=503, detail="LLM model is not loaded or ready.")

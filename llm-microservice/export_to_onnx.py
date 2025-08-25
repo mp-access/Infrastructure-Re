@@ -12,12 +12,12 @@ class GraphCodeBERTEmbedder(nn.Module):
     def forward(self, input_ids, attention_mask):
         outputs = self.encoder(input_ids=input_ids, attention_mask=attention_mask)
         last_hidden_states = outputs.last_hidden_state
-        # Mean pooling to get a single embedding vector
+        # mean pooling to get a single embedding vector
         mask_expanded = attention_mask.unsqueeze(-1).expand(last_hidden_states.size()).float()
         sum_embeddings = torch.sum(last_hidden_states * mask_expanded, 1)
         sum_mask = torch.clamp(mask_expanded.sum(1), min=1e-9)
         mean_pooled_embedding = sum_embeddings / sum_mask
-        # Normalize the embedding
+        # normalize the embedding
         normed_embedding = torch.nn.functional.normalize(mean_pooled_embedding, p=2, dim=1)
         return normed_embedding
 
