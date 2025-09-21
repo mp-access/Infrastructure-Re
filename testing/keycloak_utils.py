@@ -1,13 +1,13 @@
 # keycloak_utils.py
 
-import requests
 import json
-from config import (
-    KEYCLOAK_HOST, KEYCLOAK_ADMIN_CLI_CLIENT_ID,
-    KEYCLOAK_ADMIN_USERNAME, KEYCLOAK_ADMIN_PASSWORD,
-    KEYCLOAK_TOKEN_ENDPOINT, KEYCLOAK_ADMIN_TOKEN_ENDPOINT,
-    KEYCLOAK_USERS_API, KEYCLOAK_CLIENTS_API
-)
+
+import requests
+from config import (KEYCLOAK_ADMIN_CLI_CLIENT_ID, KEYCLOAK_ADMIN_PASSWORD,
+                    KEYCLOAK_ADMIN_TOKEN_ENDPOINT, KEYCLOAK_ADMIN_USERNAME,
+                    KEYCLOAK_CLIENTS_API, KEYCLOAK_HOST,
+                    KEYCLOAK_TOKEN_ENDPOINT, KEYCLOAK_USERS_API)
+
 
 def get_keycloak_admin_token():
     payload = {
@@ -31,9 +31,23 @@ def get_user_token(username, password, client_id):
     }
     headers = {"Content-Type": "application/x-www-form-urlencoded"}
     print(f"Attempting to get token for user '{username}' from {KEYCLOAK_TOKEN_ENDPOINT}...")
-    response = requests.post(KEYCLOAK_TOKEN_ENDPOINT, data=payload, headers=headers)
-    response.raise_for_status()
-    return response.json()["access_token"]
+    try:
+        response = requests.post(KEYCLOAK_TOKEN_ENDPOINT, data=payload, headers=headers, timeout=30)
+        print(f"Token request response status: {response.status_code} for user '{username}'")
+        response.raise_for_status()
+        return response.json()["access_token"]
+    except requests.exceptions.Timeout:
+        print(f"Token request timeout for user '{username}'")
+        raise
+    except requests.exceptions.ConnectionError as e:
+        print(f"Token request connection error for user '{username}': {e}")
+        raise
+    except requests.exceptions.HTTPError as e:
+        print(f"Token request HTTP error for user '{username}': {response.status_code} - {response.text}")
+        raise
+    except Exception as e:
+        print(f"Token request unexpected error for user '{username}': {e}")
+        raise
 
 def create_keycloak_user(admin_token, username, email, password):
     user_data = {
