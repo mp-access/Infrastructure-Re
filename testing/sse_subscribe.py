@@ -9,7 +9,7 @@ from datetime import datetime
 from queue import Empty
 
 import requests
-from config import (BACKEND_CLIENT_ID, BACKEND_URL, COURSE_SLUG,
+from config import (BACKEND_CLIENT_ID, BACKEND_URL, COURSE_SLUG, EXAMPLE_SLUG,
                     STUDENT_CREDENTIALS_FILE)
 from keycloak_utils import get_user_token
 
@@ -38,10 +38,11 @@ TIMEOUT_DURATION = 600
 TIMEOUT_INFO_INTERVAL = 60
 
 class SSEStudentProcess:
-    def __init__(self, student_info, backend_url, course_slug, backend_client_id, message_queue):
+    def __init__(self, student_info, backend_url, course_slug, example_slug, backend_client_id, message_queue):
         self.student_info = student_info
         self.backend_url = backend_url
         self.course_slug = course_slug
+        self.example_slug = example_slug
         self.backend_client_id = backend_client_id
         self.message_queue = message_queue
         self.username = student_info["username"]
@@ -50,6 +51,12 @@ class SSEStudentProcess:
         self.token = None
         self.emitter_id = None
         self.start_time = time.time()
+        self.api_calls = [
+						(self.get_courses_list, 5, 120),
+						(self.get_course_info, 10, 60),
+						(self.get_examples_list, 15, 60),
+						(self.get_example_info, 20, 30),
+				]
 
     def get_token(self):
         """Get authentication token for the student"""
@@ -63,8 +70,8 @@ class SSEStudentProcess:
 
     def send_heartbeat(self):
         """Send heartbeat"""
+        time.sleep(5)
         while self.running:
-            time.sleep(HEARTBEAT_INTERVAL)
             try:
                 if self.token and self.emitter_id:
                     headers = {"Authorization": f"Bearer {self.token}"}
@@ -81,6 +88,75 @@ class SSEStudentProcess:
             except Exception as e:
                 pass
                 self.message_queue.put(("heartbeat_error", self.username, str(e)))
+            time.sleep(HEARTBEAT_INTERVAL)
+
+    def get_courses_list(self, delay, interval):
+        """Get course info"""
+        time.sleep(delay)
+        while self.running:
+            try:
+                if self.token and self.emitter_id:
+                    headers = {"Authorization": f"Bearer {self.token}"}
+                    heartbeat_url = f"{self.backend_url}/courses"
+                    response = requests.get(heartbeat_url, headers=headers, timeout=10)
+
+                    self.message_queue.put(("api_call", self.username, f"Get courses list: {response.status_code}"))
+
+            except Exception as e:
+                pass
+                self.message_queue.put(("heartbeat_error", self.username, str(e)))
+            time.sleep(interval)
+   
+    def get_course_info(self, delay, interval):
+        """Get course info"""
+        time.sleep(delay)
+        while self.running:
+            try:
+                if self.token and self.emitter_id:
+                    headers = {"Authorization": f"Bearer {self.token}"}
+                    heartbeat_url = f"{self.backend_url}/courses/{self.course_slug}"
+                    response = requests.get(heartbeat_url, headers=headers, timeout=10)
+
+                    self.message_queue.put(("api_call", self.username, f"Get course info: {response.status_code}"))
+
+            except Exception as e:
+                pass
+                self.message_queue.put(("heartbeat_error", self.username, str(e)))
+            time.sleep(interval)
+
+    def get_examples_list(self, delay, interval):
+        """Get examples list"""
+        time.sleep(delay)
+        while self.running:
+            try:
+                if self.token and self.emitter_id:
+                    headers = {"Authorization": f"Bearer {self.token}"}
+                    heartbeat_url = f"{self.backend_url}/courses/{self.course_slug}/examples"
+                    response = requests.get(heartbeat_url, headers=headers, timeout=10)
+
+                    self.message_queue.put(("api_call", self.username, f"Get examples list: {response.status_code}"))
+
+            except Exception as e:
+                pass
+                self.message_queue.put(("heartbeat_error", self.username, str(e)))
+            time.sleep(interval)
+   
+    def get_example_info(self, delay, interval):
+        """Get example info"""
+        time.sleep(delay)
+        while self.running:
+            try:
+                if self.token and self.emitter_id:
+                    headers = {"Authorization": f"Bearer {self.token}"}
+                    heartbeat_url = f"{self.backend_url}/courses/{self.course_slug}/examples/{self.example_slug}"
+                    response = requests.get(heartbeat_url, headers=headers, timeout=10)
+
+                    self.message_queue.put(("api_call", self.username, f"Get example info: {response.status_code}"))
+
+            except Exception as e:
+                pass
+                self.message_queue.put(("heartbeat_error", self.username, str(e)))
+            time.sleep(interval)
 
     def subscribe_to_sse(self):
         """Subscribe to SSE and handle incoming events"""
@@ -135,6 +211,10 @@ class SSEStudentProcess:
                                 # Start heartbeat when received emitter ID
                                 heartbeat_thread = threading.Thread(target=self.send_heartbeat, daemon=True)
                                 heartbeat_thread.start()
+                                
+                                for api_call_function, api_call_delay, api_call_interval in self.api_calls:
+                                    api_call_thread = threading.Thread(target=api_call_function, daemon=True, args=(api_call_delay, api_call_interval))
+                                    api_call_thread.start()
                     else:
                         # Empty line - check if connection is still alive
                         current_time = time.time()
@@ -160,9 +240,9 @@ class SSEStudentProcess:
         self.subscribe_to_sse()
 
 
-def student_process_worker(student_info, backend_url, course_slug, backend_client_id, message_queue):
+def student_process_worker(student_info, backend_url, course_slug,example_slug, backend_client_id, message_queue):
     """Worker function for student subprocess"""
-    process = SSEStudentProcess(student_info, backend_url, course_slug, backend_client_id, message_queue)
+    process = SSEStudentProcess(student_info, backend_url, course_slug, example_slug, backend_client_id, message_queue)
 
     def signal_handler(signum, frame):
         process.running = False
@@ -204,7 +284,7 @@ class SSEParentProcess:
 
             process = multiprocessing.Process(
                 target=student_process_worker,
-                args=(student_info, BACKEND_URL, COURSE_SLUG, BACKEND_CLIENT_ID, self.message_queue)
+                args=(student_info, BACKEND_URL, COURSE_SLUG, EXAMPLE_SLUG, BACKEND_CLIENT_ID, self.message_queue)
             )
 
             process.start()
@@ -335,6 +415,8 @@ class SSEParentProcess:
         #     if ("SSE response status" in data or "Response headers" in data or
         #         "connection" in data.lower() or "Token expires" in data):
         #         print(f"{Colors.GRAY}[{timestamp}] DEBUG: {username} - {data}{Colors.RESET}")
+        elif message_type == "api_call":
+            print(f"{Colors.BLUE}[{timestamp}] API CALL: {username} - {data}{Colors.RESET}")
 
     def shutdown_all_processes(self):
         """Terminate all subprocesses and cleanup timers"""
