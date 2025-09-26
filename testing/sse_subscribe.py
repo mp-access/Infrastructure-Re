@@ -77,7 +77,7 @@ class SSEStudentProcess:
                 if self.token and self.emitter_id:
                     headers = {"Authorization": f"Bearer {self.token}"}
                     heartbeat_url = f"{self.backend_url}/courses/{self.course_slug}/heartbeat/{self.emitter_id}"
-                    response = requests.put(heartbeat_url, headers=headers, timeout=10)
+                    response = requests.put(heartbeat_url, headers=headers, timeout=20)
 
                 #     if response.status_code == 200:
                 #         self.message_queue.put(("heartbeat_success", self.username, ""))
@@ -99,7 +99,7 @@ class SSEStudentProcess:
                 if self.token and self.emitter_id:
                     headers = {"Authorization": f"Bearer {self.token}"}
                     heartbeat_url = f"{self.backend_url}/courses"
-                    response = requests.get(heartbeat_url, headers=headers, timeout=10)
+                    response = requests.get(heartbeat_url, headers=headers, timeout=20)
 
                     # self.message_queue.put(("api_call", self.username, f"Get courses list: {response.status_code}"))
                     self.message_queue.put(("sse_event", self.username, "courses-list"))
@@ -117,7 +117,7 @@ class SSEStudentProcess:
                 if self.token and self.emitter_id:
                     headers = {"Authorization": f"Bearer {self.token}"}
                     heartbeat_url = f"{self.backend_url}/courses/{self.course_slug}"
-                    response = requests.get(heartbeat_url, headers=headers, timeout=10)
+                    response = requests.get(heartbeat_url, headers=headers, timeout=20)
 
                     # self.message_queue.put(("api_call", self.username, f"Get course info: {response.status_code}"))
                     self.message_queue.put(("sse_event", self.username, "course-info"))
@@ -135,7 +135,7 @@ class SSEStudentProcess:
                 if self.token and self.emitter_id:
                     headers = {"Authorization": f"Bearer {self.token}"}
                     heartbeat_url = f"{self.backend_url}/courses/{self.course_slug}/examples"
-                    response = requests.get(heartbeat_url, headers=headers, timeout=10)
+                    response = requests.get(heartbeat_url, headers=headers, timeout=20)
 
                     # self.message_queue.put(("api_call", self.username, f"Get examples list: {response.status_code}"))
                     self.message_queue.put(("sse_event", self.username, "examples-list"))
@@ -153,7 +153,7 @@ class SSEStudentProcess:
                 if self.token and self.emitter_id:
                     headers = {"Authorization": f"Bearer {self.token}"}
                     heartbeat_url = f"{self.backend_url}/courses/{self.course_slug}/examples/{self.example_slug}"
-                    response = requests.get(heartbeat_url, headers=headers, timeout=10)
+                    response = requests.get(heartbeat_url, headers=headers, timeout=20)
 
                     # self.message_queue.put(("api_call", self.username, f"Get example info: {response.status_code}"))
                     self.message_queue.put(("sse_event", self.username, "example-info"))
