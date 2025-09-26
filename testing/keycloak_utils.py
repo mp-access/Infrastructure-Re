@@ -30,10 +30,10 @@ def get_user_token(username, password, client_id):
         "password": password
     }
     headers = {"Content-Type": "application/x-www-form-urlencoded"}
-    print(f"Attempting to get token for user '{username}' from {KEYCLOAK_TOKEN_ENDPOINT}...")
+    # print(f"Attempting to get token for user '{username}' from {KEYCLOAK_TOKEN_ENDPOINT}...")
     try:
         response = requests.post(KEYCLOAK_TOKEN_ENDPOINT, data=payload, headers=headers, timeout=30)
-        print(f"Token request response status: {response.status_code} for user '{username}'")
+        # print(f"Token request response status: {response.status_code} for user '{username}'")
         response.raise_for_status()
         return response.json()["access_token"]
     except requests.exceptions.Timeout:

@@ -29,7 +29,7 @@ class Colors:
 
 # ======= Constants =======
 # seconds to count for an event type
-EVENT_COUNTING_PHASE_DURATION = 10
+EVENT_COUNTING_PHASE_DURATION = 15
 # seconds to send heartbeat
 HEARTBEAT_INTERVAL = 15
 # seconds to wait before shutting down (None to disable shutdown)
@@ -52,10 +52,10 @@ class SSEStudentProcess:
         self.emitter_id = None
         self.start_time = time.time()
         self.api_calls = [
-						(self.get_courses_list, 5, 120),
-						(self.get_course_info, 10, 60),
-						(self.get_examples_list, 15, 60),
-						(self.get_example_info, 20, 30),
+						(self.get_courses_list, 	20, 	120),
+						(self.get_course_info, 		25, 	60),
+						(self.get_examples_list, 	30, 	60),
+						(self.get_example_info, 	35, 	30),
 				]
 
     def get_token(self):
@@ -87,7 +87,7 @@ class SSEStudentProcess:
 
             except Exception as e:
                 pass
-                self.message_queue.put(("heartbeat_error", self.username, str(e)))
+                self.message_queue.put(("api_error", self.username, "heartbeat: " + str(e)))
             time.sleep(HEARTBEAT_INTERVAL)
 
     def get_courses_list(self, delay, interval):
@@ -100,11 +100,12 @@ class SSEStudentProcess:
                     heartbeat_url = f"{self.backend_url}/courses"
                     response = requests.get(heartbeat_url, headers=headers, timeout=10)
 
-                    self.message_queue.put(("api_call", self.username, f"Get courses list: {response.status_code}"))
+                    # self.message_queue.put(("api_call", self.username, f"Get courses list: {response.status_code}"))
+                    self.message_queue.put(("sse_event", self.username, "courses-list"))
 
             except Exception as e:
                 pass
-                self.message_queue.put(("heartbeat_error", self.username, str(e)))
+                self.message_queue.put(("api_error", self.username, "courses-list: " + str(e)))
             time.sleep(interval)
    
     def get_course_info(self, delay, interval):
@@ -117,11 +118,12 @@ class SSEStudentProcess:
                     heartbeat_url = f"{self.backend_url}/courses/{self.course_slug}"
                     response = requests.get(heartbeat_url, headers=headers, timeout=10)
 
-                    self.message_queue.put(("api_call", self.username, f"Get course info: {response.status_code}"))
+                    # self.message_queue.put(("api_call", self.username, f"Get course info: {response.status_code}"))
+                    self.message_queue.put(("sse_event", self.username, "course-info"))
 
             except Exception as e:
                 pass
-                self.message_queue.put(("heartbeat_error", self.username, str(e)))
+                self.message_queue.put(("api_error", self.username, "course-info: " + str(e)))
             time.sleep(interval)
 
     def get_examples_list(self, delay, interval):
@@ -134,11 +136,12 @@ class SSEStudentProcess:
                     heartbeat_url = f"{self.backend_url}/courses/{self.course_slug}/examples"
                     response = requests.get(heartbeat_url, headers=headers, timeout=10)
 
-                    self.message_queue.put(("api_call", self.username, f"Get examples list: {response.status_code}"))
+                    # self.message_queue.put(("api_call", self.username, f"Get examples list: {response.status_code}"))
+                    self.message_queue.put(("sse_event", self.username, "examples-list"))
 
             except Exception as e:
                 pass
-                self.message_queue.put(("heartbeat_error", self.username, str(e)))
+                self.message_queue.put(("api_error", self.username, "examples-list: " + str(e)))
             time.sleep(interval)
    
     def get_example_info(self, delay, interval):
@@ -151,11 +154,12 @@ class SSEStudentProcess:
                     heartbeat_url = f"{self.backend_url}/courses/{self.course_slug}/examples/{self.example_slug}"
                     response = requests.get(heartbeat_url, headers=headers, timeout=10)
 
-                    self.message_queue.put(("api_call", self.username, f"Get example info: {response.status_code}"))
+                    # self.message_queue.put(("api_call", self.username, f"Get example info: {response.status_code}"))
+                    self.message_queue.put(("sse_event", self.username, "example-info"))
 
             except Exception as e:
                 pass
-                self.message_queue.put(("heartbeat_error", self.username, str(e)))
+                self.message_queue.put(("api_error", self.username, "example-info: " + str(e)))
             time.sleep(interval)
 
     def subscribe_to_sse(self):
@@ -338,7 +342,7 @@ class SSEParentProcess:
                     dead_processes.append(username)
 
             for username in dead_processes:
-                print(f"PROCESS DIED: {username} at {datetime.now()}")
+                print(f"{Colors.RED}PROCESS DIED: {username} at {datetime.now()}{Colors.RESET}")
 
         print("Process monitoring stopped")
 
@@ -402,8 +406,8 @@ class SSEParentProcess:
         #     print(f"{Colors.MAGENTA}[{timestamp}] EMITTER ID: {username} - {data}{Colors.RESET}")
         # elif message_type == "heartbeat_success":
         #     print(f"[{timestamp}] HEARTBEAT OK: {username}")
-        # elif message_type == "heartbeat_error":
-        #     print(f"{Colors.RED}[{timestamp}] HEARTBEAT ERROR: {username} - {data}{Colors.RESET}")
+        elif message_type == "api_error":
+            print(f"{Colors.RED}[{timestamp}] API ERROR: {username} - {data}{Colors.RESET}")
         elif message_type == "sse_disconnect":
             print(f"{Colors.YELLOW}[{timestamp}] SSE DISCONNECT: {username} - {data}{Colors.RESET}")
         elif message_type == "sse_error":
@@ -415,8 +419,8 @@ class SSEParentProcess:
         #     if ("SSE response status" in data or "Response headers" in data or
         #         "connection" in data.lower() or "Token expires" in data):
         #         print(f"{Colors.GRAY}[{timestamp}] DEBUG: {username} - {data}{Colors.RESET}")
-        elif message_type == "api_call":
-            print(f"{Colors.BLUE}[{timestamp}] API CALL: {username} - {data}{Colors.RESET}")
+        # elif message_type == "api_call":
+        #     print(f"{Colors.BLUE}[{timestamp}] API CALL: {username} - {data}{Colors.RESET}")
 
     def shutdown_all_processes(self):
         """Terminate all subprocesses and cleanup timers"""
@@ -431,7 +435,7 @@ class SSEParentProcess:
         for username, proc_info in self.processes.items():
             process = proc_info["process"]
             if process.is_alive():
-                print(f"Terminating process for {username}")
+                # print(f"Terminating process for {username}")
                 process.terminate()
 
         # Give processes time to terminate gracefully
