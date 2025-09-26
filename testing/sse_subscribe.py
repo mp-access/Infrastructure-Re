@@ -51,12 +51,13 @@ class SSEStudentProcess:
         self.token = None
         self.emitter_id = None
         self.start_time = time.time()
+        # api call, delay, interval
         self.api_calls = [
-						(self.get_courses_list, 	20, 	120),
-						(self.get_course_info, 		25, 	60),
-						(self.get_examples_list, 	30, 	60),
-						(self.get_example_info, 	35, 	30),
-				]
+            (self.get_courses_list, 	20, 	120),
+            (self.get_course_info, 		25, 	60),
+            (self.get_examples_list, 	30, 	60),
+            (self.get_example_info, 	35, 	30),
+        ]
 
     def get_token(self):
         """Get authentication token for the student"""
