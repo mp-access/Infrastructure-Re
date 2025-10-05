@@ -1,9 +1,6 @@
 fastapi==0.111.0
 uvicorn==0.30.1
-transformers==4.42.1
-torch==2.3.0
 pydantic==2.7.4
 numpy==1.26.4
 onnxruntime==1.22.0
-onnx==1.18.0
-onnxscript==0.4.0
+transformers==4.42.1

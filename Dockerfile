@@ -1,4 +1,5 @@
-FROM python:3.10-slim-bullseye
+# ---------- Stage 1: Build & export ONNX model ----------
+FROM python:3.10-slim-bullseye AS builder
 
 ENV DEBIAN_FRONTEND=noninteractive
 
@@ -12,15 +13,23 @@ RUN apt-get update && \
 
 WORKDIR /app
 
-COPY ./llm-microservice/requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+COPY ./llm-microservice/requirements-build.txt .
+RUN pip install --no-cache-dir -r requirements-build.txt
 
 COPY ./llm-microservice/ .
+RUN python3 export_to_onnx.py
 
-RUN python3 export_to_onnx.py && rm graphcodebert_embedder.onnx
+# ---------- Stage 2: Lightweight runtime ----------
+FROM python:3.10-slim-bullseye
 
-# should be the same as LLM_MICROSERVICE_PORT in .env
+WORKDIR /app
+
+COPY ./llm-microservice/requirements-runtime.txt .
+RUN pip install --no-cache-dir -r requirements-runtime.txt
+
+COPY --from=builder /app/graphcodebert_embedder_quantized.onnx .
+COPY ./llm-microservice/api.py ./llm-microservice/llm.py ./
+
 EXPOSE 4000
 
-# port should be the same as LLM_MICROSERVICE_PORT in .env
 CMD ["uvicorn", "api:app", "--host", "0.0.0.0", "--port", "4000"]
