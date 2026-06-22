@@ -1,6 +1,6 @@
 from os import environ
 
-environment = "staging"
+environment = "local"
 
 if environment == "local":
     # --- Keycloak Configuration ---
@@ -17,19 +17,25 @@ if environment == "local":
     KEYCLOAK_CLIENTS_API = f"{KEYCLOAK_HOST}/admin/realms/{KEYCLOAK_REALM}/clients"
 
     # --- Backend Configuration ---
-    BACKEND_URL = "http://localhost:8081/api"
+    BACKEND_URL = "http://localhost:3000/api"
     BACKEND_CLIENT_ID = "access-client"
-    API_KEY = "secret"
+    API_KEY = "1234"
 
     # --- Test Data Parameters ---
     SUPERVISOR_USERNAME = "supervisor@uzh.ch"
-    SUPERVISOR_PASSWORD = "password" # change if necessary
+    SUPERVISOR_PASSWORD = "asdf" # change if necessary
 
-    COURSE_SLUG = "access-mock-course-2" # change if necessary
+    COURSE_SLUG = "access-mock-course-lecture-examples" # change if necessary
     EXAMPLE_SLUG = "shirt-size" # change if necessary
-    TASK_FILE_ID = 9816 # look this up in the database (power-function is 51)
 
-    NUM_STUDENTS_TO_CREATE = 5 # change if necessary
+    # set the correct task file ID. You can find this out by
+    # 1. going to http://localhost:3000/courses/access-mock-course-lecture-examples/examples/shirt-size
+    # 2. opening up dev tools > network tab
+    # 3. clicking submit
+    # 4. the POST to submit will contain the taskFileId
+    TASK_FILE_ID = 5265
+
+    NUM_STUDENTS_TO_CREATE = 399 # change if necessary
     STUDENT_BASE_PASSWORD = "password"
     SUBMISSION_MODE = "consecutive" # other mode is "consecutive"
     MAX_PARALLEL_SUBMISSIONS = 1
