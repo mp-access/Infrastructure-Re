@@ -33,6 +33,10 @@ def register_students_workflow():
 
         print(f"\n--- Creating {NUM_STUDENTS_TO_CREATE} Students in Keycloak ---")
         for i in range(NUM_STUDENTS_TO_CREATE):
+            # The admin token can expire during large test runs.
+            # Refresh it every 100 students so the registration can continue.
+            if i > 0 and i % 100 == 0:
+                admin_token = get_keycloak_admin_token()
             username = f"student{i + 1}@uzh.ch"
             password = STUDENT_BASE_PASSWORD
 
