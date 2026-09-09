@@ -298,6 +298,8 @@ class SSEParentProcess:
                 "status": "running",
                 "start_time": datetime.now()
             }
+            # Avoid sending all authentication requests to Keycloak at the same time.
+            time.sleep(0.01)
 
         print(f"All {len(student_credentials)} processes created and started")
 
