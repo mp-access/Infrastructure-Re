@@ -2,7 +2,10 @@ from datetime import datetime
 
 import requests
 import json
+import math
 import os
+import time
+import statistics
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 from config import (
@@ -15,9 +18,12 @@ from keycloak_utils import get_user_token # Assuming this function is blocking
 def submit_example(student_info, submission_code_content, submission_url_template, backend_client_id):
     student_username = student_info["username"]
     student_password = student_info["password"]
+    total_start = time.perf_counter()
 
     try:
+        token_start = time.perf_counter()
         student_token = get_user_token(student_username, student_password, backend_client_id)
+        token_time = time.perf_counter() - token_start
 
         submission_dto = {
             "restricted": True,
@@ -37,15 +43,22 @@ def submit_example(student_info, submission_code_content, submission_url_templat
         }
 
         print(f"Submitting solution for '{student_username}' at time {datetime.now()}")
+        submission_start = time.perf_counter()
         response = requests.post(submission_url_template, data=json.dumps(submission_dto), headers=headers)
+        submission_time = time.perf_counter() - submission_start
         response.raise_for_status()
+        total_time = time.perf_counter() - total_start
         print(f"Submission for '{student_username}' successful! Status: {response.status_code}")
+        return True, token_time, submission_time, total_time
+
     except requests.exceptions.HTTPError as e:
         print(f"Submission for '{student_username}' FAILED: {e.response.status_code} - {e.response.text}")
     except requests.exceptions.RequestException as e:
         print(f"An HTTP request error occurred for '{student_username}': {e}")
     except Exception as e:
         print(f"An unexpected error occurred during submission for '{student_username}': {e}")
+
+    return False, None, None, time.perf_counter() - total_start
 
 def submit_solutions_workflow(mode="parallel", max_parallel_workers=10):
 
@@ -81,12 +94,16 @@ def submit_solutions_workflow(mode="parallel", max_parallel_workers=10):
         submission_url_template = f"{BACKEND_URL}/courses/{COURSE_SLUG}/examples/{EXAMPLE_SLUG}/submit"
 
         print(f"\n--- Processing Submissions for Each Student to Example '{EXAMPLE_SLUG}' ({mode.upper()} mode) ---")
+        results = []
+        test_start = time.perf_counter()
 
         if mode == "consecutive":
             for i, student_info in enumerate(student_credentials):
                 current_submission_content_entry = submission_contents_data[i]
                 submission_code_content = current_submission_content_entry["submission"]["content"]
-                submit_example(student_info, submission_code_content, submission_url_template, BACKEND_CLIENT_ID)
+                results.append(
+                    submit_example(student_info, submission_code_content, submission_url_template, BACKEND_CLIENT_ID)
+                )
                 print(f"Processed {i + 1}/{len(student_credentials)} submissions.")
         elif mode == "parallel":
             with ThreadPoolExecutor(max_workers=max_parallel_workers) as executor:
@@ -104,10 +121,12 @@ def submit_solutions_workflow(mode="parallel", max_parallel_workers=10):
                 for i, future in enumerate(as_completed(future_per_student)):
                     student_username = future_per_student[future]
                     try:
-                        future.result()
+                        results.append(future.result())
                     except Exception as exc:
                         print(f"'{student_username}' generated an exception: {exc}")
                     print(f"Completed {i + 1}/{len(student_credentials)} parallel submissions.")
+        test_duration = time.perf_counter() - test_start
+        print_summary(results, len(student_credentials), test_duration)
 
     except FileNotFoundError as e:
         print(f"\nError: {e}")
@@ -115,6 +134,58 @@ def submit_solutions_workflow(mode="parallel", max_parallel_workers=10):
         print(f"\nAn unexpected error occurred: {e}")
 
     print("\n--- Solution Submission Complete ---")
+
+def get_p95(values):
+    sorted_values = sorted(values)
+    index = math.ceil(0.95 * len(sorted_values)) - 1
+    return sorted_values[index]
+
+def print_time_statistics(name, values):
+    average = sum(values) / len(values)
+    median = statistics.median(values)
+    p95 = get_p95(values)
+
+    print(
+        f"{name:<25}"
+        f"{min(values):>8.3f}"
+        f"{average:>10.3f}"
+        f"{median:>10.3f}"
+        f"{p95:>8.3f}"
+        f"{max(values):>8.3f}"
+    )
+
+def print_summary(results, total_submissions, test_duration):
+    successful_results = [result for result in results if result[0]]
+    successful_count = len(successful_results)
+    failed_count = total_submissions - successful_count
+
+    print("\n--- Submission Test Summary ---")
+    print(f"Total submissions: {total_submissions}")
+    print(f"Successful: {successful_count}")
+    print(f"Failed: {failed_count}")
+    print(f"Total duration: {test_duration:.3f}s")
+
+    if test_duration > 0:
+        print(f"Throughput: {successful_count / test_duration:.2f} submissions/s")
+
+    if successful_results:
+        token_times = [result[1] for result in successful_results]
+        submission_times = [result[2] for result in successful_results]
+        total_times = [result[3] for result in successful_results]
+
+        print("\nTiming statistics (seconds)")
+        print(
+            f"{'Metric':<25}"
+            f"{'Min':>8}"
+            f"{'Average':>10}"
+            f"{'Median':>10}"
+            f"{'P95':>8}"
+            f"{'Max':>8}"
+        )
+
+        print_time_statistics("Token request time", token_times)
+        print_time_statistics("Submission request time", submission_times)
+        print_time_statistics("Total time per student", total_times)
 
 if __name__ == "__main__":
     submit_solutions_workflow(mode=SUBMISSION_MODE, max_parallel_workers=MAX_PARALLEL_SUBMISSIONS)
